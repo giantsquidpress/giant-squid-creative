@@ -1,0 +1,52 @@
+name: swap-site
+on: workflow_dispatch
+permissions:
+  contents: write
+jobs:
+  swap:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Move old site to old-site/ and publish the new site at the root
+        run: |
+          set -euo pipefail
+          cat _incoming/part-* > /tmp/site.zip
+          echo "7d215fa4104c694a7f996c8f8acaea60bfe18450b7cde1849859cb9625e29327  /tmp/site.zip" | sha256sum -c -
+          mkdir /tmp/new
+          unzip -q /tmp/site.zip -d /tmp/new
+          mkdir old-site
+          shopt -s dotglob
+          for f in *; do
+            case "$f" in .git|.github|old-site|_incoming|CNAME) continue;; esac
+            git mv -- "$f" old-site/
+          done
+          cp -a /tmp/new/. .
+          python3 - <<'PY'
+          import os
+          n = 0
+          for root, dirs, files in os.walk('old-site'):
+              for f in files:
+                  if not f.endswith('.html'):
+                      continue
+                  rel = os.path.relpath(os.path.join(root, f), 'old-site')
+                  if os.path.exists(rel):
+                      continue
+                  d = os.path.dirname(rel)
+                  if d:
+                      os.makedirs(d, exist_ok=True)
+                  url = '/old-site/' + rel
+                  html = ('<!doctype html><meta charset="utf-8"><title>Moved</title>'
+                          '<link rel="canonical" href="https://thisisgiantsquid.com' + url + '">'
+                          '<meta http-equiv="refresh" content="0; url=' + url + '">'
+                          '<p>This page moved to <a href="' + url + '">' + url + '</a>.</p>\n')
+                  open(rel, 'w').write(html)
+                  n += 1
+          print('redirect stubs:', n)
+          PY
+          git rm -r -q _incoming
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git status --short | wc -l
+          git commit -q -m "Publish 2026 site at the root; previous site moved to /old-site/"
+          git push origin HEAD:main
