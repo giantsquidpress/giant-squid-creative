@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>About Giant Squid Creative</title>
+<script src="assets/support.js"></script>
+<link rel="stylesheet" href="assets/ds/gsc/tokens.css">
+<link rel="stylesheet" href="assets/ds/gsc/components/bundle.css">
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Playfair+Display:ital,wght@1,400&display=swap">
+<style>
+body{margin:0;background:#b9e5fb}
+a.navlink{color:#182857;text-decoration:none;transition:color 150ms ease-out}
+a.navlink:hover{color:#d32827;text-decoration:none}
+a.pill{background:#182857;transition:background 150ms ease-out}
+a.pill:hover{background:#d32827;color:#ffffff;text-decoration:none}
+button.pill{transition:background 150ms ease-out,color 150ms ease-out;cursor:pointer}
+button.pill:hover{background:#d32827 !important;color:#ffffff !important}
+a.card{background:#ffffff;text-decoration:none;transition:background 150ms ease-out}
+a.card:hover{background:#182857;text-decoration:none}
+a.card .cap{color:#182857;transition:color 150ms ease-out}
+a.card:hover .cap{color:#ffffff}
+.swap .img-b{opacity:0;transition:opacity 250ms ease-out}
+a.card:hover .img-b{opacity:1}
+/*footer*/
+.cf-two{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+input.field::placeholder,textarea.field::placeholder{color:rgba(0,0,0,0.5);opacity:1}
+.cf-int{display:flex;flex-wrap:wrap;align-items:center;gap:10px 26px;color:#ffffff;font-family:var(--font-cond);font-size:20px;line-height:1.2}
+.cf-int .cf-lab{flex:0 0 auto}
+.cf-int .cf-lab strong{font-weight:600;letter-spacing:0.04em}
+.cf-int label{display:inline-flex;align-items:center;gap:8px;cursor:pointer;font-weight:500}
+.cf-int input{width:22px;height:22px;margin:0;accent-color:#b9e5fb;cursor:pointer}
+@media (max-width:767px){.cf-two{grid-template-columns:minmax(0,1fr)}#contact{padding:32px 22px!important}#contact h2{font-size:clamp(34px,9vw,64px)!important}}
+.ft-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));align-items:stretch}
+.ft-c1{padding:8px 40px 8px 0;border-right:1px solid #182857;display:flex;flex-direction:column;justify-content:center;gap:12px}
+.ft-nav{padding:8px 40px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px;text-align:center}
+.ft-c3{padding:8px 0 8px 40px;border-left:1px solid #182857;display:flex;flex-direction:column;justify-content:center;gap:12px}
+.ft-brand{width:min(316px,100%);display:flex;flex-direction:column;gap:12px}
+.ft-logo{display:block;width:100%;height:auto}
+.ft-tag{margin:0;width:100%;font-size:clamp(13px,5.8cqw,19px);line-height:1.3;font-weight:400;color:#5a688c;text-wrap:balance;overflow-wrap:anywhere}
+.ft-brand{container-type:inline-size}
+.ft-form{display:flex;flex-direction:column;align-items:flex-start;gap:12px}
+.ft-form .field{width:100%;box-sizing:border-box}
+.ft-copy{margin:40px 0 0;text-align:center;font-family:var(--font-cond);font-size:12px;line-height:28px;font-weight:400;color:#182857}
+@media (max-width:991px){
+.ft-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+.ft-c1{grid-column:1 / -1;border-right:0;border-bottom:1px solid #182857;padding:8px 0 28px;align-items:center;text-align:center}
+.ft-nav{padding:28px 20px 8px 0}
+.ft-c3{padding:28px 0 8px 28px}
+}
+@media (max-width:767px){
+.ft-grid{grid-template-columns:minmax(0,1fr)}
+.ft-c1,.ft-nav,.ft-c3{border:0;padding:24px 0 0;align-items:center;text-align:center}
+.ft-c3{border-top:1px solid #182857;margin-top:24px;padding-top:24px}
+.ft-form{align-items:center}
+.ft-copy{margin-top:28px}
+}
+.gh{position:relative;z-index:40;max-width:1440px;margin:0 auto;padding:14px 40px;box-sizing:border-box;min-height:96px;display:flex;align-items:center}
+.gh-logo{display:block;flex:0 0 auto;width:clamp(190px,23.25vw,335px);margin-right:clamp(16px,2.8vw,40px)}
+.gh-logo img{display:block;width:100%;height:auto}
+.gh-nav{flex:1 1 auto;min-width:0;display:flex;justify-content:space-between;align-items:center;gap:6px}
+.gh-nav a.navlink.tx{font-family:'Bebas Neue','Franklin Gothic Condensed',sans-serif;font-weight:400;font-size:clamp(18px,2.5vw,32px);letter-spacing:0.04em;text-transform:uppercase;white-space:nowrap}
+.gh-nav .ig svg{display:block;width:clamp(22px,2.6vw,36px);height:clamp(22px,2.6vw,36px)}
+.gh-nav a.pill{display:inline-flex;align-items:center;justify-content:center;text-align:center;white-space:nowrap;height:clamp(28px,2.6vw,38px);padding:clamp(1px,0.2vw,3px) clamp(14px,1.8vw,26px) 0;box-sizing:border-box;border-radius:999px;color:#ffffff;font-family:var(--font-cond);font-weight:600;font-size:clamp(13px,1.45vw,20px);line-height:1;letter-spacing:0.06em;text-transform:uppercase}
+.gh-chk{position:absolute;right:20px;top:50%;margin:-22px 0 0;width:44px;height:44px;opacity:0;cursor:pointer;z-index:3;display:none}
+.gh-burger{display:none;width:44px;height:44px;margin-left:auto;cursor:pointer;flex-direction:column;justify-content:center;align-items:center;gap:6px;border-radius:8px}
+.gh-burger span{display:block;width:28px;height:3px;border-radius:2px;background:#182857;transition:transform 200ms ease-out,opacity 150ms ease-out}
+.gh-chk:checked + .gh-burger span:nth-child(1){transform:translateY(9px) rotate(45deg)}
+.gh-chk:checked + .gh-burger span:nth-child(2){opacity:0}
+.gh-chk:checked + .gh-burger span:nth-child(3){transform:translateY(-9px) rotate(-45deg)}
+.gh-chk:focus-visible + .gh-burger{outline:3px solid #d32827;outline-offset:2px}
+@media (max-width:767px){
+.gh{padding:12px 20px;min-height:84px}
+.gh-logo{width:clamp(170px,46vw,260px);margin-right:0}
+.gh-chk{display:block}
+.gh-burger{display:flex}
+.gh-nav{display:none;position:absolute;left:0;right:0;top:100%;flex-direction:column;align-items:center;justify-content:flex-start;gap:20px;padding:24px 20px 32px;background:#b9e5fb;border-bottom:3px solid #182857}
+.gh-chk:checked ~ .gh-nav{display:flex}
+.gh-nav a.navlink.tx{font-size:32px}
+.gh-nav .ig svg{width:32px;height:32px}
+.gh-nav a.pill{height:40px;padding:3px 28px 0;font-size:18px}
+}
+
+.capswap{display:grid}
+.capswap>.cap-a,.capswap>.cap-b{grid-area:1/1;transition:opacity 250ms ease-out}
+.capswap>.cap-b{opacity:0}
+a.card:hover .cap-a{opacity:0}
+a.card:hover .cap-b{opacity:1}
+a.tl{color:inherit;text-decoration:underline;text-underline-offset:4px;text-decoration-thickness:2px;transition:color 150ms ease-out}
+a.tl:hover{color:#d32827}
+.ai-box{background:#ffffff;border:2pt dotted #182857;border-radius:10px;padding:28px 32px 30px;display:flex;flex-direction:column;gap:20px;color:#182857;box-sizing:border-box}
+.ai-cta{margin-top:14px;max-width:900px;display:flex;flex-direction:column;gap:12px;padding:24px 26px 26px;background:#182857;border-radius:10px;color:#ffffff;box-sizing:border-box}
+.ai-q{margin:0;font-family:var(--font-cond);font-weight:600;font-size:26px;line-height:1.1;letter-spacing:0.02em}
+.ai-row{display:flex;align-items:center;gap:12px}
+.ai-cta input.field{height:44px;font-size:17px;padding:0 14px;flex:1 1 0;min-width:0;border-color:#ffffff}
+.ai-cta input.field::placeholder{color:rgba(0,0,0,0.5);opacity:1}
+@media (max-width:560px){.ai-row.two{flex-direction:column;align-items:stretch}.ai-row.two input.field{flex:0 0 auto}}
+
+a.card:focus-visible{outline:3px solid #d32827;outline-offset:2px}
+input.field,textarea.field{font-family:var(--font-cond);font-size:20px;font-weight:500;color:#182857;background:#ffffff;border:2px solid #ffffff;border-radius:10px;padding:0 16px;box-sizing:border-box;width:100%}
+input.field{height:52px}
+textarea.field{padding:14px 16px;min-height:140px;resize:vertical}
+input.field:focus,textarea.field:focus{outline:3px solid #d32827;outline-offset:2px}
+</style>
+</helmet>
+<div style="background:#b9e5fb;color:#182857;font-family:var(--font-cond)">
+
+  <!-- Top menu bar -->
+  <header class="gh">
+    <a class="gh-logo" href="index.html" aria-label="Giant Squid Creative"><img src="assets/img/96ed0ad1ff9d442e81a9d2fccaf5aae4.png" alt="Giant Squid Creative" width="223" height="61"></a>
+    <input class="gh-chk" id="gh-toggle" type="checkbox" aria-label="Open menu">
+    <label class="gh-burger" for="gh-toggle" aria-hidden="true"><span></span><span></span><span></span></label>
+    <nav class="gh-nav" aria-label="Primary">
+      <a class="navlink tx" href="index.html">Home</a>
+      <a class="navlink tx" href="about.html">About</a>
+      <a class="navlink tx" href="work.html">Work</a>
+      <a class="navlink tx" href="contact.html">Contact</a>
+      <a class="navlink ig" href="#" aria-label="Instagram" style="display:inline-flex;align-items:center">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"></circle></svg>
+      </a>
+      <a class="pill" href="contact.html">Hire us</a>
+    </nav>
+  </header>
+  <div style="height:7px;background-image:var(--wave-line-navy);background-repeat:repeat-x"></div>
+
+  <main style="max-width:1440px;margin:0 auto;padding:0 40px 96px;box-sizing:border-box">
+
+    <!-- Headline -->
+    <section style="padding:64px 0 48px">
+      <h1 style="margin:0;white-space:nowrap;font-family:var(--font-xcomp);font-weight:600;font-size:min(127.5px, calc((100vw - 80px) / 10.27));line-height:1;letter-spacing:0;text-transform:uppercase;color:#182857">About</h1>
+    </section>
+
+    <!-- Photo card -->
+    <a class="card" href="#" style="display:flex;flex-direction:column;margin:0 -30px;padding:10px 10px 0;box-sizing:border-box;border-radius:10px;color:#182857">
+      <div class="swap" style="position:relative;aspect-ratio:1600 / 1143;border-radius:10px;overflow:hidden">
+        <img src="assets/img/4ebc649f2dd8cc3e1589e3e222d1d4f3.jpg" alt="Kenny Colvin behind the bar at Sanita, 2025" width="2000" height="1429" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;object-position:50% 50%;display:block">
+        <img class="img-b" src="assets/img/740f5d7137870c5848f4a2bc59fdbcf1.jpg" alt="Kenny Colvin in the Giant Squid Press print shop, circa 2011" width="1400" height="932" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;object-position:50% 50%;display:block">
+      </div>
+      <div class="cap capswap">
+        <div class="cap-a" style="min-height:64px;padding-top:8px;box-sizing:border-box;display:flex;flex-wrap:wrap;align-content:center;align-items:baseline;column-gap:0.3em;text-align:left;font-size:26px;line-height:1.2;font-weight:400"><span style="font-weight:600;text-transform:uppercase;letter-spacing:0.02em">Giant Squid Creative:</span><span>Kenny Colvin 2025</span></div>
+        <div class="cap-b" style="min-height:64px;padding-top:8px;box-sizing:border-box;display:flex;flex-wrap:wrap;align-content:center;align-items:baseline;column-gap:0.3em;text-align:left;font-size:26px;line-height:1.2;font-weight:400"><span style="font-weight:600;text-transform:uppercase;letter-spacing:0.02em">Giant Squid Press:</span><span>circa 2011</span></div>
+      </div>
+    </a>
+
+    <!-- Body copy -->
+    <section style="padding:89px 0 0">
+      <div style="max-width:1200px;display:flex;flex-direction:column;gap:26px">
+        <p style="margin:0;font-size:30px;line-height:1.35;font-weight:400">Giant Squid Creative is a design and consulting studio run by Kenny Colvin, with the help of collaborators and co-conspirators like <a class="tl" href="https://www.thevictoriablack.com/" target="_blank" rel="noopener">Victoria Black</a>, <a class="tl" href="https://www.kimsielbeck.com/" target="_blank" rel="noopener">Kim Sielbeck</a>, <a class="tl" href="https://danielle-malmgren.com/" target="_blank" rel="noopener">Danielle Malmgren</a>, <a class="tl" href="https://www.instagram.com/nickgazin/" target="_blank" rel="noopener">Nick Gazin</a> and <a class="tl" href="https://merlinmannelly.com/" target="_blank" rel="noopener">Merlin’s Magic Signs</a>.</p>
+        <p style="margin:0;font-size:30px;line-height:1.35;font-weight:400">Founded in 2006 in New York City, as Giant Squid Press, we started off as a graphic design and letterpress printing studio. With a memorable, impactful brand, we made a name for ourselves specializing in high-end custom designed and printed wedding invitations, concert posters and brand collateral for bars and restaurants. As the years went by, we found our studio work and client list gravitating more towards branding, packaging, UI UX, and social media strategy. Because of this, in 2016, to better reflect the full range of services we provide, the design studio that specializes in re-branding, re-branded itself as Giant Squid Creative.</p>
+        <p style="margin:0;font-size:25px;line-height:1.35;font-weight:400"><strong style="font-weight:600">Likes:</strong> Futura, Mezcal, Amaro, Broccoli Rabe, Yakitori, The Clash and the NY Mets</p>
+        <p style="margin:-12px 0 0;font-size:25px;line-height:1.35;font-weight:400"><strong style="font-weight:600">Dislikes:</strong> Helvetica, IPAs, Shitake Mushrooms, Offal, The Grateful Dead and the Phillies</p>
+        <div class="ai-box">
+          <p style="margin:0;font-size:30px;line-height:1.35;font-weight:600">Giant Squid Creative statement about AI:</p>
+          <p style="margin:0;font-size:30px;line-height:1.35;font-weight:400">Here at Giant Squid Creative, we come from a fully analog background and that spirit informs everything that we do to this day, even when working digitally. That said, we are not luddites and recognize that times change and technology changes.</p>
+          <p style="margin:0;font-size:30px;line-height:1.35;font-weight:400">AI is here and it is here to stay. Though we know how to use gen AI to create images and video, we only use it at our clients request. When using AI we try and use in the most ethical ways possible. If you’d like to know more about our position, feel free to contact us below.</p>
+        </div>
+        <form class="ai-cta" onSubmit="{{ noop }}">
+          <p class="ai-q">Got an AI opinion?</p>
+          <div class="ai-row two">
+            <input class="field" type="text" placeholder="Name" aria-label="Name" autocomplete="name">
+            <input class="field" type="email" placeholder="Email" aria-label="Email" autocomplete="email">
+          </div>
+          <div class="ai-row">
+            <input class="field" type="text" placeholder="Tell us what you really think" aria-label="Tell us what you really think">
+            <button class="pill" type="submit" style="display:inline-flex;align-items:center;justify-content:center;height:39px;padding:4px 21px 0;border:0;border-radius:999px;background:#b9e5fb;color:#182857;font-family:var(--font-cond);font-weight:600;font-size:14.25px;line-height:1;letter-spacing:0.04em;text-transform:uppercase;flex:0 0 auto">Submit</button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <div style="height:7px;background-image:var(--wave-line-navy);background-repeat:repeat-x"></div>
+  <footer style="max-width:1440px;margin:0 auto;padding:56px 40px 28px;box-sizing:border-box">
+    <div class="ft-grid">
+      <div class="ft-c1">
+<div class="ft-brand"><img class="ft-logo" src="assets/img/96ed0ad1ff9d442e81a9d2fccaf5aae4.png" alt="Giant Squid Creative" width="316" height="86">
+        <p class="ft-tag">is a multi-disciplinary design studio doing business in Tokyo, NYC and Florida</p></div>
+      </div>
+      <nav class="ft-nav" aria-label="Footer">
+        <a class="navlink" href="index.html" style="font-family:'Bebas Neue','Franklin Gothic Condensed',sans-serif;font-weight:400;font-size:24px;line-height:1.2;letter-spacing:0.04em;text-transform:uppercase">Home</a>
+        <a class="navlink" href="about.html" style="font-family:'Bebas Neue','Franklin Gothic Condensed',sans-serif;font-weight:400;font-size:24px;line-height:1.2;letter-spacing:0.04em;text-transform:uppercase">About</a>
+        <a class="navlink" href="work.html" style="font-family:'Bebas Neue','Franklin Gothic Condensed',sans-serif;font-weight:400;font-size:24px;line-height:1.2;letter-spacing:0.04em;text-transform:uppercase">Work</a>
+        <a class="navlink" href="contact.html" style="font-family:'Bebas Neue','Franklin Gothic Condensed',sans-serif;font-weight:400;font-size:24px;line-height:1.2;letter-spacing:0.04em;text-transform:uppercase">Contact</a>
+        <a class="navlink" href="#" style="font-family:'Bebas Neue','Franklin Gothic Condensed',sans-serif;font-weight:400;font-size:24px;line-height:1.2;letter-spacing:0.04em;text-transform:uppercase">Instagram</a>
+      </nav>
+      <div class="ft-c3">
+        <label for="ml-email" style="font-weight:600;font-size:17px;letter-spacing:0.04em;text-transform:uppercase;color:#182857">Join the mailing list</label>
+        <form class="ft-form" onSubmit="{{ noop }}">
+          <input class="field" id="ml-email" type="email" placeholder="Email" aria-label="Email" autocomplete="email">
+          <button class="pill" type="submit" style="display:inline-flex;align-items:center;justify-content:center;text-align:center;height:39px;padding:4px 21px 0;border:0;border-radius:999px;background:#182857;color:#ffffff;font-family:var(--font-cond);font-weight:600;font-size:14.25px;line-height:1;letter-spacing:0.04em;text-transform:uppercase">Submit</button>
+        </form>
+      </div>
+    </div>
+    <p class="ft-copy">Website design by <strong style="font-weight:600">Giant Squid Creative</strong> (I thought that was obvious, but... here we are) | Copyright © Kenny Colvin, Giant Squid Creative (formerly Giant Squid Press) 2006–2026.</p>
+  </footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":3000}}'>
+class Component extends DCLogic {
+  renderVals() {
+    return { noop: (e) => { if (e && e.preventDefault) e.preventDefault(); } };
+  }
+}
+</script>
+</body>
+</html>

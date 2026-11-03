@@ -1,0 +1,235 @@
+/* Giant Squid Creative Design System — generated from tokens.json */
+:root, [data-theme="default"] {
+  --gsc-navy: #182857;
+  --gsc-red: #d32827;
+  --gsc-sky: #b9e5fb;
+  --gsc-white: #ffffff;
+  --gsc-navy-90: #2a3a68;
+  --gsc-navy-70: #5a688c;
+  --gsc-navy-30: #bac1d2;
+  --gsc-navy-10: #e8eaf0;
+  --gsc-red-dark: #b01f1e;
+  --gsc-red-10: #fbe9e9;
+  --gsc-sky-50: #dcf2fd;
+  --gsc-sky-25: #eef8fe;
+  --surface-page: var(--gsc-white);
+  --surface-sky: var(--gsc-sky);
+  --surface-ink: var(--gsc-navy);
+  --surface-card: var(--gsc-white);
+  --surface-raised: var(--gsc-sky-25);
+  --text-body: var(--gsc-navy);
+  --text-muted: var(--gsc-navy-70);
+  --text-accent: var(--gsc-red);
+  --text-inverse: var(--gsc-white);
+  --text-on-sky: var(--gsc-navy);
+  --border-strong: var(--gsc-navy);
+  --border-subtle: var(--gsc-navy-30);
+  --link: var(--gsc-red);
+  --link-hover: var(--gsc-red-dark);
+  --focus-ring: var(--gsc-red);
+  --status-error: var(--gsc-red);
+  --status-success: #1d6b4a;
+  --status-warning: #b06a1e;
+  --shadow-offset: 3px 3px 0 #182857;
+  --shadow-offset-sky: 3px 3px 0 #b9e5fb;
+}
+:root {
+  --sp-1: 4px;
+  --sp-2: 8px;
+  --sp-3: 12px;
+  --sp-4: 16px;
+  --sp-5: 24px;
+  --sp-6: 32px;
+  --sp-7: 48px;
+  --sp-8: 64px;
+  --sp-9: 96px;
+  --radius-none: 0;
+  --radius-sm: 2px;
+  --radius-md: 4px;
+  --radius-pill: 999px;
+  --w-light: 300;
+  --w-book: 400;
+  --w-medium: 500;
+  --w-demi: 600;
+  --w-heavy: 800;
+  --rule-strong: 2px solid #182857;
+  --rule-subtle: 1px solid #bac1d2;
+  --text-xs: 12px;
+  --text-sm: 14px;
+  --text-base: 16px;
+  --text-lg: 20px;
+  --text-xl: 26px;
+  --text-2xl: 34px;
+  --text-3xl: 48px;
+  --text-display: 72px;
+  --leading-tight: 1.05;
+  --leading-snug: 1.2;
+  --leading-body: 1.55;
+  --tracking-caps: 0.18em;
+  --tracking-wide: 0.08em;
+  --font-sans: 'Franklin Gothic URW','Franklin Gothic Medium','Helvetica Neue',Arial,sans-serif;
+  --font-cond: 'Franklin Gothic Condensed','Arial Narrow',Arial,sans-serif;
+  --font-comp: 'Franklin Gothic Compressed','Arial Narrow',Arial,sans-serif;
+  --font-xcomp: 'Franklin Gothic Extra Compressed','Arial Narrow',Arial,sans-serif;
+}
+.body {
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 1.55;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+@font-face {
+  font-family: "Franklin Gothic URW";
+  src: url("fonts/FranklinGothicURW-Lig.otf") format("opentype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Franklin Gothic URW";
+  src: url("fonts/FranklinGothicURW-LigIta.otf") format("opentype");
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Franklin Gothic URW";
+  src: url("fonts/FranklinGothicURW-Boo.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Franklin Gothic URW";
+  src: url("fonts/FranklinGothicURW-BooIta.otf") format("opentype");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Franklin Gothic URW";
+  src: url("fonts/FranklinGothicURW-Med.otf") format("opentype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Franklin Gothic URW";
+  src: url("fonts/FranklinGothicURW-MedIta.otf") format("opentype");
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Franklin Gothic URW";
+  src: url("fonts/FranklinGothicURW-Dem.otf") format("opentype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Franklin Gothic URW";
+  src: url("fonts/FranklinGothicURW-DemIta.otf") format("opentype");
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Franklin Gothic URW";
+  src: url("fonts/FranklinGothicURW-Hea.otf") format("opentype");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Franklin Gothic URW";
+  src: url("fonts/FranklinGothicURW-HeaIta.otf") format("opentype");
+  font-weight: 800;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Franklin Gothic Condensed";
+  src: url("fonts/FranklinGothicURWCond-Book.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Franklin Gothic Condensed";
+  src: url("fonts/FranklinGothicURWCon-BooIta.otf") format("opentype");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Franklin Gothic Condensed";
+  src: url("fonts/FranklinGothicURWCond-Medium.otf") format("opentype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Franklin Gothic Condensed";
+  src: url("fonts/FranklinGothicURWCon-MedIta.otf") format("opentype");
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Franklin Gothic Condensed";
+  src: url("fonts/FranklinGothicURWCon-Dem.otf") format("opentype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Franklin Gothic Condensed";
+  src: url("fonts/FranklinGothicURWCon-DemIta.otf") format("opentype");
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Franklin Gothic Compressed";
+  src: url("fonts/FranklinGothicURWCom-Boo.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Franklin Gothic Compressed";
+  src: url("fonts/FranklinGothicURWCom-BooIta.otf") format("opentype");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Franklin Gothic Compressed";
+  src: url("fonts/FranklinGothicURWCom-Dem.otf") format("opentype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Franklin Gothic Compressed";
+  src: url("fonts/FranklinGothicURWCom-DemIta.otf") format("opentype");
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Franklin Gothic Extra Compressed";
+  src: url("fonts/FranklinGothicURWExtComD-Boo.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Franklin Gothic Extra Compressed";
+  src: url("fonts/FranklinGothicURWExtComD-Dem.otf") format("opentype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}

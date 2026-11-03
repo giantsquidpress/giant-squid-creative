@@ -1,0 +1,64 @@
+/* ── styles.css ── */
+/* ── tokens/fonts.css ── */
+/* @font-face Franklin Gothic URW 300 normal: declared by tokens.json (fonts/FranklinGothicURW-Lig.otf) */
+/* @font-face Franklin Gothic URW 300 italic: declared by tokens.json (fonts/FranklinGothicURW-LigIta.otf) */
+/* @font-face Franklin Gothic URW 400 normal: declared by tokens.json (fonts/FranklinGothicURW-Boo.otf) */
+/* @font-face Franklin Gothic URW 400 italic: declared by tokens.json (fonts/FranklinGothicURW-BooIta.otf) */
+/* @font-face Franklin Gothic URW 500 normal: declared by tokens.json (fonts/FranklinGothicURW-Med.otf) */
+/* @font-face Franklin Gothic URW 500 italic: declared by tokens.json (fonts/FranklinGothicURW-MedIta.otf) */
+/* @font-face Franklin Gothic URW 600 normal: declared by tokens.json (fonts/FranklinGothicURW-Dem.otf) */
+/* @font-face Franklin Gothic URW 600 italic: declared by tokens.json (fonts/FranklinGothicURW-DemIta.otf) */
+/* @font-face Franklin Gothic URW 800 normal: declared by tokens.json (fonts/FranklinGothicURW-Hea.otf) */
+/* @font-face Franklin Gothic URW 800 italic: declared by tokens.json (fonts/FranklinGothicURW-HeaIta.otf) */
+/* @font-face Franklin Gothic Condensed 400 normal: declared by tokens.json (fonts/FranklinGothicURWCond-Book.otf) */
+/* @font-face Franklin Gothic Condensed 400 italic: declared by tokens.json (fonts/FranklinGothicURWCon-BooIta.otf) */
+/* @font-face Franklin Gothic Condensed 500 normal: declared by tokens.json (fonts/FranklinGothicURWCond-Medium.otf) */
+/* @font-face Franklin Gothic Condensed 500 italic: declared by tokens.json (fonts/FranklinGothicURWCon-MedIta.otf) */
+/* @font-face Franklin Gothic Condensed 600 normal: declared by tokens.json (fonts/FranklinGothicURWCon-Dem.otf) */
+/* @font-face Franklin Gothic Condensed 600 italic: declared by tokens.json (fonts/FranklinGothicURWCon-DemIta.otf) */
+/* @font-face Franklin Gothic Compressed 400 normal: declared by tokens.json (fonts/FranklinGothicURWCom-Boo.otf) */
+/* @font-face Franklin Gothic Compressed 400 italic: declared by tokens.json (fonts/FranklinGothicURWCom-BooIta.otf) */
+/* @font-face Franklin Gothic Compressed 600 normal: declared by tokens.json (fonts/FranklinGothicURWCom-Dem.otf) */
+/* @font-face Franklin Gothic Compressed 600 italic: declared by tokens.json (fonts/FranklinGothicURWCom-DemIta.otf) */
+/* @font-face Franklin Gothic Extra Compressed 400 normal: declared by tokens.json (fonts/FranklinGothicURWExtComD-Boo.otf) */
+/* @font-face Franklin Gothic Extra Compressed 600 normal: declared by tokens.json (fonts/FranklinGothicURWExtComD-Dem.otf) */
+
+/* ── styles.css ── */
+
+/* ── tokens/colors.css ── */
+:root{
+}
+
+/* ── styles.css ── */
+
+/* ── tokens/typography.css ── */
+:root{
+}
+body{font-family:var(--font-sans);font-weight:var(--w-book);color:var(--text-body);font-size:var(--text-base);line-height:var(--leading-body)}
+a{color:var(--link);text-decoration:none}
+a:hover{color:var(--link-hover);text-decoration:underline}
+
+/* ── styles.css ── */
+
+/* ── tokens/spacing.css ── */
+:root{
+/* Wave pattern assets (26x26px tiles, wave at top) */
+--wave-white:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAaCAYAAACpSkzOAAABFUlEQVR4AeySbRGCQBCGkQQ0UBrYQEygDcQG2gATaAMwgTRAEzgmABOoCfB5ZYYB/APnjL+O2edu72N3717Odf702ULGQlvprHS1AvVjKMvSg6DDpN75o+OSOIGCPA/IOuSsyVKakDUjIzbQjVZEj0F2o7k0eOHLFjQxAQUs8XsZeydwZnOmQkec+aj6pnRBA481H7ZwBx3oRLAKbugD5lrG3BRCSFnIYQaOS9IQVFXjL1gr4AD6Xzs26JYquMfPSNgy5q4Qg1Sgc6SQrxtp0AuKRWxUwTW9lJDUuC3TQZRch/KJkULFoEJKR+ATEpASkhq3ZR4jJY/o9cgU5gwu9IkyaGwhA9GqECtdpYNBa6UzEK0KeQMAAP//+g1YiAAAAAZJREFUAwDv+341ZuA2agAAAABJRU5ErkJggg==); /* @kind other */
+--wave-navy:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAaCAYAAACpSkzOAAABVklEQVR4AeySPVaDQBSF36MxJSVqAXTEih2IKzCNJp24A91BXIHuIEkXKtkBugK1ki5jlenULhZmvAPnkIhNMp6TauZwE5j3c+d94NCOljUyBm3RWXQNgeZjCOKe60WDpKWgyfznjYPGYy/qi8Vi751IFS3NEFP73X6OvNTUC7UJJlIXaOBDxEQvRPy4En0SllJ0igOMYCoOuuc9bG10wSDwosEDagsY8YSIT2SZ8bzMYllOk5UyF7GQma6J6A3yl4rvtSGmvEKTBHu/rsOjsxj7KeI5DGbQsU5w0DSF4Kof/woxMX/N7mSZ4X3xDTL0lD6mvEWTAqZqXd9L5wn7I8RBAdk1oRAT6YfNJMvpsNP50oaXRDypUVN74SCs8eNQHKJGExJbGemO4jn/QPEYSmvUGUtgX5Mra/xD/Atdo7W1kS4ykTUyoVbVWHQVBpMfi86EWlXzAwAA//85Jzi3AAAABklEQVQDAG69lzXIrl7jAAAAAElFTkSuQmCC); /* @kind other */
+--wave-sky:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAaCAYAAACpSkzOAAABX0lEQVR4AeyST07CUBDGZ15oE3dsbTHCDXoDYUNlhTew3kBvICfQG4An0B2WDXACwwnACHWprIxt03GmaZ6pMSHUxNVr+vXP5M18X399Cv7pMEaVQRt0Bp0moDfDdEn18UvSLun1o6lX/vFBhVE8mmziVWynb0rBtKSstgw3CbEeJus4qOol4RUQnhPgcTFkAQRzLYRtUe8T4lAChVF6VtR23sZMJFwnszw8IN1lGXR810KW5zestpZj1TOVtgjpCoGe80BE92L4GMWXkvSnG3+5xwqEgmIigHAia5Tv2EHvyJrJy2/qHR6sTh37tuva8r8G3LgVQyS8kaQ8UNBqEeITa8iz+iwAgrmE1ZshL+64+K51bX/Wmkh0AUyCly9Y5VNw83AuDsRA6EjYvYy4GTotfO827JGQYGOPJci/xbh9wc+hxEB6RHsbSVMVGaMq1PIegy7HUOVi0FWhlvd8AQAA///ye9cEAAAABklEQVQDAE39oTWDr0KGAAAAAElFTkSuQmCC); /* @kind other */
+--wave-line-navy:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAHCAYAAAAWAl2LAAABLUlEQVR4AaSRP1KDQBTG36MxJSVqAXTEihuIJzCNJp14A71BPIHeIEkXKrkBegK1ki5YhU7tYmHW3w6ZScQm6g6/2dl9f759H46sVhD3XC8aJC2CVfjfm0PjsRf1q8Vi51XEFC1mxMxut5+Tl/5VjdqEicwZDXwQFXkS0fs18i4sY+SYB4wQrfa6pz2utvoQCLxocEdtgZBORPSoLjOdl1lcl9NkTeYSC1XlUkRewF8avbWCTHlBk4S7b9/+wUnMfUo8R2AGhzbBoWkKqNrjT4hV8+fspi4z/pdekWGn9JnymiYFomaTz6XzwP2IOC6Q3TgUMpE9bEddToedzocVPBfRSWO1tBcPUWs/j9KQGutQ9Ssh27F6zN8oHkPaWJ1pje0buHVj/5C9sjWWLwAAAP//DOhd4wAAAAZJREFUAwDjmZcPLtUHiwAAAABJRU5ErkJggg==); /* @kind other */
+--wave-line-white:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAHCAYAAAAWAl2LAAAA7ElEQVR4AaSS0RWCMAxFKxOwgbABG1gn0A3EDXQDnEA3ACeQDdAJPE5AnUCdAO878kHxB6Unt0mbJmkDgWlH0zQh2B5R6x6tAhIX4Mj0gKpHjU9SMqX4/hJirV60InoKkhvTpcMLW7JgyglwsMQeJJyN4MzhSoWOGPPJZyQo2yHEF8MW7qALnQhWwQ3asucJewmkUOKoYQYmIGkKqqr1F/gcHEDfa8cBvVIF99gVCT1h7wo5qAsoow7FepEWg6BYxkEVXKPVCbUa0xNdRMl1qZgYdcj9VEjpCHxCAeqEWo3pSchKyTO0fjKFmTcAAAD//wSCSHMAAAAGSURBVAMA9OB+DzeHc9cAAAAASUVORK5CYII=); /* @kind other */
+--wave-line-sky:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAHCAYAAAAWAl2LAAABN0lEQVR4AaSSQU7CYBCFZ/7QJu7Y2mKEG/QGwobKCm9gvYHeQE6gNwBPoDssG+AEhhOAEepSWRnbpuO8pqmpMSFK069/Ov1n3utrDRXHdCn18UvSrvD60Swe772YMIpHk028iu30zRiaVshqy3CTiPIwWcfBf9Vg3pDwuRAfF0MWJDQvYdoW9b4wD2EojNKzorZzGWsi4TqZ5eaJ5S7LqOO7Fiue37DaJY5Vz0zaEpYrJnnODYncQ/Axii/h9KeavrmnBEjBaCLEdII9xnfsoHdkzXDzG73Dg9WpY992XRvfa6CNWwiy8A2c6kBEWyLMT8pQZ/UVIqE5zJY/Q17ccfFd69r+rDVZ5II0Cd2+UKon4tbhWhxAAOnA7J+EtJk6LX7vNuwRklBhT0Hk32jcPuJXUxBAD/gCAAD//+sl2BoAAAAGSURBVAMAvHKhD5EQtksAAAAASUVORK5CYII=); /* @kind other */
+}
+
+/* ── styles.css ── */
+
+
+/* ── tokens/fonts.css ── */
+
+/* ── tokens/colors.css ── */
+
+/* ── tokens/typography.css ── */
+
+/* ── tokens/spacing.css ── */
+

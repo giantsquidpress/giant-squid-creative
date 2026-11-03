@@ -1,0 +1,518 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Giant Squid Creative Portfolio</title>
+<script src="assets/support.js"></script>
+<link rel="stylesheet" href="assets/ds/gsc/tokens.css">
+<link rel="stylesheet" href="assets/ds/gsc/components/bundle.css">
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Playfair+Display:ital,wght@1,400&display=swap">
+<style>
+body{margin:0;background:#b9e5fb}
+a.navlink{color:#182857;text-decoration:none;transition:color 150ms ease-out}
+a.navlink:hover{color:#d32827;text-decoration:none}
+a.pill{background:#182857;transition:background 150ms ease-out}
+a.pill:hover{background:#d32827;color:#ffffff;text-decoration:none}
+button.pill{transition:background 150ms ease-out,color 150ms ease-out;cursor:pointer}
+button.pill:hover{background:#d32827 !important;color:#ffffff !important}
+a.card{background:#ffffff;text-decoration:none;transition:background 150ms ease-out}
+a.card:hover{background:#182857;text-decoration:none}
+a.card .cap{color:#182857;transition:color 150ms ease-out}
+a.card:hover .cap{color:#ffffff}
+.swap .img-b{opacity:0;transition:opacity 250ms ease-out}
+a.card:hover .img-b{opacity:1}
+/*footer*/
+.cf-two{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+input.field::placeholder,textarea.field::placeholder{color:rgba(0,0,0,0.5);opacity:1}
+.cf-int{display:flex;flex-wrap:wrap;align-items:center;gap:10px 26px;color:#ffffff;font-family:var(--font-cond);font-size:20px;line-height:1.2}
+.cf-int .cf-lab{flex:0 0 auto}
+.cf-int .cf-lab strong{font-weight:600;letter-spacing:0.04em}
+.cf-int label{display:inline-flex;align-items:center;gap:8px;cursor:pointer;font-weight:500}
+.cf-int input{width:22px;height:22px;margin:0;accent-color:#b9e5fb;cursor:pointer}
+@media (max-width:767px){.cf-two{grid-template-columns:minmax(0,1fr)}#contact{padding:32px 22px!important}#contact h2{font-size:clamp(34px,9vw,64px)!important}}
+.ft-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));align-items:stretch}
+.ft-c1{padding:8px 40px 8px 0;border-right:1px solid #182857;display:flex;flex-direction:column;justify-content:center;gap:12px}
+.ft-nav{padding:8px 40px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px;text-align:center}
+.ft-c3{padding:8px 0 8px 40px;border-left:1px solid #182857;display:flex;flex-direction:column;justify-content:center;gap:12px}
+.ft-brand{width:min(316px,100%);display:flex;flex-direction:column;gap:12px}
+.ft-logo{display:block;width:100%;height:auto}
+.ft-tag{margin:0;width:100%;font-size:clamp(13px,5.8cqw,19px);line-height:1.3;font-weight:400;color:#5a688c;text-wrap:balance;overflow-wrap:anywhere}
+.ft-brand{container-type:inline-size}
+.ft-form{display:flex;flex-direction:column;align-items:flex-start;gap:12px}
+.ft-form .field{width:100%;box-sizing:border-box}
+.ft-copy{margin:40px 0 0;text-align:center;font-family:var(--font-cond);font-size:12px;line-height:28px;font-weight:400;color:#182857}
+@media (max-width:991px){
+.ft-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+.ft-c1{grid-column:1 / -1;border-right:0;border-bottom:1px solid #182857;padding:8px 0 28px;align-items:center;text-align:center}
+.ft-nav{padding:28px 20px 8px 0}
+.ft-c3{padding:28px 0 8px 28px}
+}
+@media (max-width:767px){
+.ft-grid{grid-template-columns:minmax(0,1fr)}
+.ft-c1,.ft-nav,.ft-c3{border:0;padding:24px 0 0;align-items:center;text-align:center}
+.ft-c3{border-top:1px solid #182857;margin-top:24px;padding-top:24px}
+.ft-form{align-items:center}
+.ft-copy{margin-top:28px}
+}
+.gh{position:relative;z-index:40;max-width:1440px;margin:0 auto;padding:14px 40px;box-sizing:border-box;min-height:96px;display:flex;align-items:center}
+.gh-logo{display:block;flex:0 0 auto;width:clamp(190px,23.25vw,335px);margin-right:clamp(16px,2.8vw,40px)}
+.gh-logo img{display:block;width:100%;height:auto}
+.gh-nav{flex:1 1 auto;min-width:0;display:flex;justify-content:space-between;align-items:center;gap:6px}
+.gh-nav a.navlink.tx{font-family:'Bebas Neue','Franklin Gothic Condensed',sans-serif;font-weight:400;font-size:clamp(18px,2.5vw,32px);letter-spacing:0.04em;text-transform:uppercase;white-space:nowrap}
+.gh-nav .ig svg{display:block;width:clamp(22px,2.6vw,36px);height:clamp(22px,2.6vw,36px)}
+.gh-nav a.pill{display:inline-flex;align-items:center;justify-content:center;text-align:center;white-space:nowrap;height:clamp(28px,2.6vw,38px);padding:clamp(1px,0.2vw,3px) clamp(14px,1.8vw,26px) 0;box-sizing:border-box;border-radius:999px;color:#ffffff;font-family:var(--font-cond);font-weight:600;font-size:clamp(13px,1.45vw,20px);line-height:1;letter-spacing:0.06em;text-transform:uppercase}
+.gh-chk{position:absolute;right:20px;top:50%;margin:-22px 0 0;width:44px;height:44px;opacity:0;cursor:pointer;z-index:3;display:none}
+.gh-burger{display:none;width:44px;height:44px;margin-left:auto;cursor:pointer;flex-direction:column;justify-content:center;align-items:center;gap:6px;border-radius:8px}
+.gh-burger span{display:block;width:28px;height:3px;border-radius:2px;background:#182857;transition:transform 200ms ease-out,opacity 150ms ease-out}
+.gh-chk:checked + .gh-burger span:nth-child(1){transform:translateY(9px) rotate(45deg)}
+.gh-chk:checked + .gh-burger span:nth-child(2){opacity:0}
+.gh-chk:checked + .gh-burger span:nth-child(3){transform:translateY(-9px) rotate(-45deg)}
+.gh-chk:focus-visible + .gh-burger{outline:3px solid #d32827;outline-offset:2px}
+@media (max-width:767px){
+.gh{padding:12px 20px;min-height:84px}
+.gh-logo{width:clamp(170px,46vw,260px);margin-right:0}
+.gh-chk{display:block}
+.gh-burger{display:flex}
+.gh-nav{display:none;position:absolute;left:0;right:0;top:100%;flex-direction:column;align-items:center;justify-content:flex-start;gap:20px;padding:24px 20px 32px;background:#b9e5fb;border-bottom:3px solid #182857}
+.gh-chk:checked ~ .gh-nav{display:flex}
+.gh-nav a.navlink.tx{font-size:32px}
+.gh-nav .ig svg{width:32px;height:32px}
+.gh-nav a.pill{height:40px;padding:3px 28px 0;font-size:18px}
+}
+
+button.tab{appearance:none;background:none;border:0;border-bottom:3px solid transparent;padding:0 0 4px;margin:0;cursor:pointer;font-family:'Bebas Neue','Franklin Gothic Condensed',sans-serif;font-weight:400;font-size:clamp(20px,2.3vw,30px);line-height:1;letter-spacing:0.04em;text-transform:uppercase;color:#182857;transition:color 150ms ease-out,border-color 150ms ease-out}
+button.tab:hover{color:#d32827}
+button.tab.on{color:#d32827;border-bottom-color:#d32827}
+button.tab:focus-visible{outline:3px solid #d32827;outline-offset:4px}
+.lbox{background:#ffffff;border-radius:10px;padding:44px 48px 52px;box-sizing:border-box}
+.lgrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:36px 48px}
+button.lg{appearance:none;border:0;background:none;padding:0;margin:0;cursor:pointer;display:block;width:100%;aspect-ratio:3 / 2;border-radius:10px;position:relative}
+button.lg img{display:block;width:100%;height:100%;object-fit:contain;mix-blend-mode:multiply;transition:transform 150ms ease-out}
+button.lg:hover img{transform:scale(1.05)}
+button.lg img.h{position:absolute;left:0;top:0;opacity:0;transition:opacity 150ms ease-out,transform 150ms ease-out}
+button.lg.hv img.b{transition:opacity 150ms ease-out,transform 150ms ease-out}
+button.lg.hv:hover img.h{opacity:1}
+button.lg.hv:hover img.b{opacity:0}
+button.lg:focus-visible{outline:3px solid #d32827;outline-offset:6px}
+.pgrid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));column-gap:10px;row-gap:0;align-items:start;grid-auto-flow:dense}
+.pgrid>.sp2{grid-column:span 2}
+.agrid{column-count:4;column-gap:10px}
+.cw{container-type:inline-size;width:100%}
+.wcap{overflow-wrap:anywhere}
+.cc{display:flex;flex-wrap:wrap;align-items:baseline;column-gap:0.3em;min-width:0}
+.wcap .cc{flex:1 1 auto}
+button.pcard,button.tcard{appearance:none;font:inherit;text-align:left;width:100%;display:block;margin:0 0 10px;background:#ffffff;border:0;border-radius:10px;padding:10px 10px 0;box-sizing:border-box;color:#182857;cursor:pointer;transition:background 150ms ease-out,color 150ms ease-out}
+button.pcard:hover,button.tcard:hover{background:#182857;color:#ffffff}
+button.pcard:focus-visible,button.tcard:focus-visible{outline:3px solid #d32827;outline-offset:2px}
+button.pcard .ph,button.tcard .ph{border-radius:10px;overflow:hidden;border:1px solid #dbe4ec}
+button.pcard .ph img,button.tcard .ph img{display:block;width:100%;height:auto}
+button.pcard .wcap{min-height:50px;padding-top:6px;box-sizing:border-box;display:flex;align-items:center;text-align:left;font-size:clamp(11px,5.6cqw,19px);line-height:1.25;font-weight:400}
+button.tcard .wcap{min-height:40px;padding-top:5px;box-sizing:border-box;display:flex;align-items:center;text-align:left;font-size:clamp(11px,5cqw,15px);line-height:1.2;font-weight:400}
+.wcap .t{font-weight:600;text-transform:uppercase;letter-spacing:0.02em}
+.dgrid{display:grid;grid-template-columns:minmax(0,3fr) minmax(0,1fr);gap:20px;align-items:start}
+article.dblock{background:#ffffff;border-radius:10px;padding:28px 28px 8px;box-sizing:border-box;color:#182857}
+article.dblock h2{margin:18px 0 0;font-family:'Bebas Neue','Franklin Gothic Condensed',sans-serif;font-weight:400;font-size:clamp(34px,5vw,64px);line-height:1;letter-spacing:0.02em;text-transform:uppercase}
+article.dblock .sub{margin:8px 0 0;font-size:clamp(20px,2.3vw,28px);line-height:1.2;font-weight:600}
+article.dblock .meta{margin:10px 0 0;font-size:19px;line-height:1.35;font-weight:400}
+article.dblock .desc{margin:16px 0 0;font-size:clamp(16px,1.75vw,21px);line-height:1.4;font-weight:400;max-width:900px}
+article.dblock ul{margin:16px 0 0;padding:0 0 0 24px;font-size:clamp(16px,1.75vw,21px);line-height:1.4;max-width:900px}
+article.dblock li{margin:0 0 8px}
+article.dblock a.ext{display:inline-block;margin-top:12px;font-size:19px;color:#182857;text-decoration:underline}
+article.dblock a.ext:hover{color:#d32827}
+article.dblock .figs{margin-top:28px}
+article.dblock figure{margin:0 0 28px}
+article.dblock figure img{display:block;width:100%;height:auto;border-radius:10px;border:1px solid #dbe4ec}
+article.dblock figcaption{padding-top:8px;font-size:18px;line-height:1.35;font-weight:400}
+button.back{appearance:none;background:none;border:0;padding:0;margin:0;cursor:pointer;font-family:'Bebas Neue','Franklin Gothic Condensed',sans-serif;font-size:26px;letter-spacing:0.04em;text-transform:uppercase;color:#182857;transition:color 150ms ease-out}
+button.back:hover{color:#d32827}
+button.back:focus-visible{outline:3px solid #d32827;outline-offset:3px}
+aside.thumbs{position:sticky;top:16px;max-height:calc(100vh - 32px);overflow-y:auto;display:flex;flex-direction:column;gap:0;padding-right:2px}
+aside.thumbs .hd{margin:0 0 10px;font-family:'Bebas Neue','Franklin Gothic Condensed',sans-serif;font-size:26px;letter-spacing:0.04em;text-transform:uppercase;color:#182857}
+details.wcard{break-inside:avoid;margin:0 0 10px;background:#ffffff;border-radius:10px;padding:10px 10px 0;box-sizing:border-box;color:#182857;transition:background 150ms ease-out}
+details.wcard:hover,details.wcard[open]{background:#182857;color:#ffffff}
+details.wcard>summary{list-style:none;display:block;cursor:pointer}
+details.wcard>summary::-webkit-details-marker{display:none}
+details.wcard>summary:focus-visible{outline:3px solid #d32827;outline-offset:2px}
+details.wcard .ph{border-radius:10px;overflow:hidden;border:1px solid #dbe4ec}
+details.wcard .ph img{display:block;width:100%;height:auto}
+details.wcard .wcap{min-height:50px;padding-top:6px;box-sizing:border-box;display:flex;align-items:center;gap:10px;text-align:left;font-size:clamp(11px,5.6cqw,19px);line-height:1.25;font-weight:400}
+details.wcard .wcap .chev{margin-left:auto;flex:0 0 auto;font-size:28px;line-height:1;font-weight:400;transition:transform 150ms ease-out}
+details.wcard[open] .wcap .chev{transform:rotate(45deg)}
+details.wcard .more{padding:2px 0 18px;font-size:19px;line-height:1.4;font-weight:400}
+details.wcard .more p{margin:0}
+.lbo{position:fixed;left:0;top:0;right:0;bottom:0;z-index:50;display:flex;align-items:center;justify-content:center;padding:24px;box-sizing:border-box}
+button.lbbd{position:absolute;left:0;top:0;width:100%;height:100%;border:0;padding:0;margin:0;background:rgba(24,40,87,0.97);cursor:pointer}
+.lbp{position:relative;width:min(1000px, calc(100vw - 220px));max-height:calc(100vh - 48px);overflow:auto;border-radius:10px;padding:16px 16px 18px;box-sizing:border-box;color:#182857}
+.lbp img{display:block;margin:0 auto;width:100%;height:min(calc(100vh - 300px), 600px);object-fit:contain;border-radius:10px}
+.lbp img.half{height:min(calc((100vh - 340px) / 2), 280px)}
+.lbp .lbcap{margin-top:14px;font-size:22px;line-height:1.25}
+.lbp .lbcap .t{font-weight:600;text-transform:uppercase;letter-spacing:0.02em}
+.lbp .lbdesc{margin-top:8px;font-size:19px;line-height:1.4;max-width:900px}
+.lbp .lbn{margin-top:8px;font-size:15px;opacity:0.7}
+button.lbarr{position:absolute;top:50%;margin-top:-32px;width:64px;height:64px;border-radius:32px;border:0;background:#ffffff;color:#182857;font-size:34px;line-height:1;cursor:pointer;z-index:2;transition:background 150ms ease-out,color 150ms ease-out}
+button.lbarr:hover{background:#d32827;color:#ffffff}
+button.lbarr.l{left:32px}
+button.lbarr.r{right:32px}
+button.lbx{position:absolute;top:24px;right:32px;width:48px;height:48px;border-radius:24px;border:0;background:#ffffff;color:#182857;font-size:30px;line-height:1;cursor:pointer;z-index:2;transition:background 150ms ease-out,color 150ms ease-out}
+button.lbx:hover{background:#d32827;color:#ffffff}
+button.lbarr:focus-visible,button.lbx:focus-visible{outline:3px solid #b9e5fb;outline-offset:3px}
+.gate{position:absolute;left:50%;top:56px;transform:translateX(-50%);z-index:40;width:min(540px, calc(100vw - 48px));background:#ffffff;border-radius:10px;padding:40px 36px 36px;box-sizing:border-box;text-align:center;color:#182857;box-shadow:0 24px 70px rgba(24,40,87,0.35)}
+.gate p.msg{margin:18px 0 22px;font-size:26px;line-height:1.25;font-weight:400}
+.gate input.pw{display:block;width:100%;height:58px;box-sizing:border-box;border:2px solid #182857;border-radius:29px;padding:0 22px;text-align:center;font:inherit;font-size:22px;color:#182857;background:#ffffff}
+.gate input.pw:focus-visible{outline:3px solid #d32827;outline-offset:2px}
+.gate button.go{appearance:none;display:block;width:100%;height:58px;margin-top:12px;border:0;border-radius:29px;background:#182857;color:#ffffff;font-family:'Bebas Neue','Franklin Gothic Condensed',sans-serif;font-size:30px;letter-spacing:0.06em;text-transform:uppercase;cursor:pointer;transition:background 150ms ease-out}
+.gate button.go:hover{background:#d32827}
+.gate button.go:focus-visible{outline:3px solid #d32827;outline-offset:3px}
+.gate p.err{margin:12px 0 0;font-size:18px;color:#d32827}
+@media (max-width:1200px){
+	.lgrid{gap:28px 32px}
+.lbox{padding:32px 32px 40px}
+.pgrid{grid-template-columns:repeat(3,minmax(0,1fr))}
+.agrid{column-count:3}
+}
+@media (max-width:900px){
+.dgrid{grid-template-columns:minmax(0,1fr)}
+aside.thumbs{position:static;max-height:none;overflow:visible;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:10px;row-gap:0}
+aside.thumbs .hd{grid-column:1 / -1}
+}
+@media (max-width:767px){
+.wmain{padding-left:20px!important;padding-right:20px!important}
+.lgrid{grid-template-columns:repeat(2,minmax(0,1fr));gap:20px 16px}
+.lbox{padding:20px 16px 24px}
+.pgrid{grid-template-columns:repeat(2,minmax(0,1fr))}
+.agrid{column-count:2}
+article.dblock{padding:18px 16px 4px}
+.lbo{padding:60px 12px 84px}
+.lbp{width:calc(100vw - 24px);padding:12px 12px 14px}
+.lbp .lbcap{font-size:18px}
+.lbp .lbdesc{font-size:16px}
+button.lbarr{top:auto;bottom:16px;margin-top:0;width:52px;height:52px;border-radius:26px;font-size:28px}
+button.lbarr.l{left:calc(50% - 64px)}
+button.lbarr.r{right:calc(50% - 64px)}
+button.lbx{top:12px;right:12px}
+.gate{padding:28px 20px 24px}
+.gate p.msg{font-size:21px}
+}
+@media (max-width:479px){
+aside.thumbs{grid-template-columns:minmax(0,1fr)}
+}
+a.card:focus-visible{outline:3px solid #d32827;outline-offset:2px}
+input.field,textarea.field{font-family:var(--font-cond);font-size:20px;font-weight:500;color:#182857;background:#ffffff;border:2px solid #ffffff;border-radius:10px;padding:0 16px;box-sizing:border-box;width:100%}
+input.field{height:52px}
+textarea.field{padding:14px 16px;min-height:140px;resize:vertical}
+input.field:focus,textarea.field:focus{outline:3px solid #d32827;outline-offset:2px}
+</style>
+</helmet>
+<div style="background:#b9e5fb;color:#182857;font-family:var(--font-cond)">
+
+  <!-- Top menu bar -->
+  <header class="gh">
+    <a class="gh-logo" href="index.html" aria-label="Giant Squid Creative"><img src="assets/img/96ed0ad1ff9d442e81a9d2fccaf5aae4.png" alt="Giant Squid Creative" width="223" height="61"></a>
+    <input class="gh-chk" id="gh-toggle" type="checkbox" aria-label="Open menu">
+    <label class="gh-burger" for="gh-toggle" aria-hidden="true"><span></span><span></span><span></span></label>
+    <nav class="gh-nav" aria-label="Primary">
+      <a class="navlink tx" href="index.html">Home</a>
+      <a class="navlink tx" href="about.html">About</a>
+      <a class="navlink tx" href="work.html">Work</a>
+      <a class="navlink tx" href="contact.html">Contact</a>
+      <a class="navlink ig" href="#" aria-label="Instagram" style="display:inline-flex;align-items:center">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"></circle></svg>
+      </a>
+      <a class="pill" href="contact.html">Hire us</a>
+    </nav>
+  </header>
+  <div style="height:7px;background-image:var(--wave-line-navy);background-repeat:repeat-x"></div>
+
+  <main class="wmain" style="max-width:1440px;margin:0 auto;padding:0 40px 96px;box-sizing:border-box">
+
+    <section id="wtop" style="padding:64px 0 0;text-align:center">
+      <h1 style="margin:0;font-family:var(--font-xcomp);font-weight:600;font-size:min(127.5px, calc((100vw - 80px) / 10.27));line-height:1;letter-spacing:0;text-transform:uppercase;color:#182857">Portfolio</h1>
+      <div role="group" aria-label="Portfolio categories" style="margin:28px 0 56px;display:flex;flex-wrap:wrap;justify-content:center;gap:12px clamp(16px,3vw,40px)">
+        <button class="tab {{ tab.logos }}" type="button" onClick="{{ pick.logos }}">Logos</button>
+        <button class="tab {{ tab.packaging }}" type="button" onClick="{{ pick.packaging }}">Packaging</button>
+        <button class="tab {{ tab.menus }}" type="button" onClick="{{ pick.menus }}">Menu Design</button>
+        <button class="tab {{ tab.ui }}" type="button" onClick="{{ pick.ui }}">UI / UX</button>
+        <button class="tab {{ tab.social }}" type="button" onClick="{{ pick.social }}">Social</button>
+        <button class="tab {{ tab.posters }}" type="button" onClick="{{ pick.posters }}">Posters</button>
+        <button class="tab {{ tab.pharma }}" type="button" onClick="{{ pick.pharma }}">Pharma</button>
+        <button class="tab {{ tab.other }}" type="button" onClick="{{ pick.other }}">Other</button>
+      </div>
+    </section>
+
+    <!-- Logos: transparent on the blue, open in the lightbox -->
+    <sc-if value="{{ view.logos }}" hint-placeholder-val="{{ true }}">
+      <div class="lbox"><div class="lgrid">
+        <sc-for list="{{ logos }}" as="l" hint-placeholder-count="8">
+          <button class="lg {{ l.cls }}" type="button" onClick="{{ l.go }}" aria-label="{{ l.alt }}"><img class="b" src="{{ l.src }}" alt="{{ l.alt }}" width="{{ l.w }}" height="{{ l.h }}"><sc-if value="{{ l.hasH }}" hint-placeholder-val="{{ false }}"><img class="h" src="{{ l.hsrc }}" alt="" width="{{ l.hw }}" height="{{ l.hh }}"></sc-if></button>
+        </sc-for>
+      </div></div>
+    </sc-if>
+
+    <!-- Polaroid cards: open a lightbox or a project view -->
+    <sc-if value="{{ view.cards }}" hint-placeholder-val="{{ false }}">
+      <div class="pgrid">
+        <sc-for list="{{ cards }}" as="c" hint-placeholder-count="4">
+          <button class="pcard {{ c.sp }}" type="button" onClick="{{ c.go }}"><div class="ph"><img src="{{ c.src }}" alt="{{ c.alt }}" width="{{ c.w }}" height="{{ c.h }}"></div><div class="cw"><div class="wcap"><span class="cc"><span class="t">{{ c.title }}:</span><span>{{ c.short }}</span></span></div></div></button>
+        </sc-for>
+      </div>
+    </sc-if>
+
+    <!-- Project view: 3/4 block and 1/4 thumbnails -->
+    <sc-if value="{{ view.detail }}" hint-placeholder-val="{{ false }}">
+      <div class="dgrid">
+        <article class="dblock">
+          <button class="back" type="button" onClick="{{ det.back }}">← All {{ det.catLabel }}</button>
+          <h2>{{ det.title }}</h2>
+          <p class="sub">{{ det.short }}</p>
+          <sc-if value="{{ det.hasMeta }}" hint-placeholder-val="{{ false }}"><p class="meta">{{ det.meta }}</p></sc-if>
+          <p class="desc">{{ det.desc }}</p>
+          <sc-if value="{{ det.hasBullets }}" hint-placeholder-val="{{ false }}">
+            <ul>
+              <sc-for list="{{ det.bullets }}" as="b" hint-placeholder-count="3"><li>{{ b.t }}</li></sc-for>
+            </ul>
+          </sc-if>
+          <sc-if value="{{ det.hasLink }}" hint-placeholder-val="{{ false }}"><a class="ext" href="{{ det.link }}" target="_blank" rel="noopener">{{ det.linktext }}</a></sc-if>
+          <div class="figs">
+            <sc-for list="{{ det.images }}" as="m" hint-placeholder-count="2">
+              <figure><img src="{{ m.src }}" alt="{{ m.alt }}" width="{{ m.w }}" height="{{ m.h }}"><sc-if value="{{ m.hasCap }}" hint-placeholder-val="{{ true }}"><figcaption>{{ m.cap }}</figcaption></sc-if></figure>
+            </sc-for>
+          </div>
+        </article>
+        <aside class="thumbs" aria-label="More projects">
+          <p class="hd">More {{ det.catLabel }}</p>
+          <sc-for list="{{ thumbs }}" as="t" hint-placeholder-count="4">
+            <button class="tcard" type="button" onClick="{{ t.go }}"><div class="ph"><img src="{{ t.src }}" alt="{{ t.alt }}" width="{{ t.w }}" height="{{ t.h }}"></div><div class="cw"><div class="wcap"><span class="cc"><span class="t">{{ t.title }}:</span><span>{{ t.short }}</span></span></div></div></button>
+          </sc-for>
+        </aside>
+      </div>
+    </sc-if>
+
+    <div style="position:relative">
+    <!-- Accordion categories -->
+    <sc-if value="{{ show.pharma }}" hint-placeholder-val="{{ false }}">
+      <div class="agrid" style="{{ accStyle.pharma }}">
+<details class="wcard"><summary><div class="ph"><img src="assets/img/edc0cb55768bd71d5e30954cdaeeb53d.jpg" alt="Reclast: Brochure cover" width="368" height="588"></div><div class="cw"><div class="wcap"><span class="cc"><span class="t">Reclast:</span><span>Brochure cover</span></span><span class="chev" aria-hidden="true">+</span></div></div></summary><div class="more"><p>Patient brochure cover for Reclast (zoledronic acid) injection. Headline: Step up your bone protection.</p></div></details>
+<details class="wcard"><summary><div class="ph"><img src="assets/img/2b6faaf9aea82a3d1563e53c38ad8ac2.jpg" alt="Reclast: Brochure inside spread" width="732" height="588"></div><div class="cw"><div class="wcap"><span class="cc"><span class="t">Reclast:</span><span>Brochure inside spread</span></span><span class="chev" aria-hidden="true">+</span></div></div></summary><div class="more"><p>Inside spread of the Reclast patient brochure about Paget&#x27;s disease and one-dose bone therapy.</p></div></details>
+<details class="wcard"><summary><div class="ph"><img src="assets/img/7a767a9683e44fccb86c4872bc3af21d.jpg" alt="Reclast: Carton and dieline" width="912" height="890"></div><div class="cw"><div class="wcap"><span class="cc"><span class="t">Reclast:</span><span>Carton and dieline</span></span><span class="chev" aria-hidden="true">+</span></div></div></summary><div class="more"><p>Carton dieline for Reclast 5 mg/100 mL, Sandoz, with NDC number, barcode and prescribing panels.</p></div></details>
+<details class="wcard"><summary><div class="ph"><img src="assets/img/0d8e09eded7586511cb8d20218344949.jpg" alt="Truvada: Print ad" width="1024" height="664"></div><div class="cw"><div class="wcap"><span class="cc"><span class="t">Truvada:</span><span>Print ad</span></span><span class="chev" aria-hidden="true">+</span></div></div></summary><div class="more"><p>Two-page print ad for Truvada. Headline: HIV doesn&#x27;t have to change the hopes and dreams I have now.</p></div></details>
+      </div>
+    </sc-if>
+    <sc-if value="{{ show.other }}" hint-placeholder-val="{{ false }}">
+      <div class="agrid" style="{{ accStyle.other }}">
+<details class="wcard"><summary><div class="ph"><img src="assets/img/f17631f26e627802157ba09413933097.jpg" alt="Wedding invitation: Red and gray" width="1250" height="1750"></div><div class="cw"><div class="wcap"><span class="cc"><span class="t">Wedding invitation:</span><span>Red and gray</span></span><span class="chev" aria-hidden="true">+</span></div></div></summary><div class="more"><p>Custom wedding invitation. Giant Squid Press made a name for itself with high-end custom designed and printed wedding invitations. Red names on a pale gray double border.</p></div></details>
+<details class="wcard"><summary><div class="ph"><img src="assets/img/6971b508e90d3835c24274a8c4cd504a.jpg" alt="Wedding invitation: Art deco pink" width="1250" height="1750"></div><div class="cw"><div class="wcap"><span class="cc"><span class="t">Wedding invitation:</span><span>Art deco pink</span></span><span class="chev" aria-hidden="true">+</span></div></div></summary><div class="more"><p>Custom wedding invitation. Giant Squid Press made a name for itself with high-end custom designed and printed wedding invitations. Pink fan pattern across the top and bottom.</p></div></details>
+<details class="wcard"><summary><div class="ph"><img src="assets/img/fff2888d858cc90aefe54d06b10930ee.jpg" alt="Wedding invitation: Stone wall" width="1250" height="1750"></div><div class="cw"><div class="wcap"><span class="cc"><span class="t">Wedding invitation:</span><span>Stone wall</span></span><span class="chev" aria-hidden="true">+</span></div></div></summary><div class="more"><p>Custom wedding invitation. Giant Squid Press made a name for itself with high-end custom designed and printed wedding invitations. A drawn stone wall behind a black rounded frame.</p></div></details>
+<details class="wcard"><summary><div class="ph"><img src="assets/img/834008dd2a359aee09e7488159e93b3b.jpg" alt="Wedding invitation: Brooklyn Bridge" width="1250" height="1750"></div><div class="cw"><div class="wcap"><span class="cc"><span class="t">Wedding invitation:</span><span>Brooklyn Bridge</span></span><span class="chev" aria-hidden="true">+</span></div></div></summary><div class="more"><p>Custom wedding invitation. Giant Squid Press made a name for itself with high-end custom designed and printed wedding invitations. Royal blue Brooklyn Bridge along the bottom edge.</p></div></details>
+<details class="wcard"><summary><div class="ph"><img src="assets/img/c11c2e1fe5cdf101b9bbee7061cfb3a9.jpg" alt="Wedding invitation: Black and white" width="1250" height="1750"></div><div class="cw"><div class="wcap"><span class="cc"><span class="t">Wedding invitation:</span><span>Black and white</span></span><span class="chev" aria-hidden="true">+</span></div></div></summary><div class="more"><p>Custom wedding invitation. Giant Squid Press made a name for itself with high-end custom designed and printed wedding invitations. White art deco fans on black.</p></div></details>
+<details class="wcard"><summary><div class="ph"><img src="assets/img/acc1a9b959c256935564a0b86fda6506.jpg" alt="Wedding invitation: City skyline" width="700" height="506"></div><div class="cw"><div class="wcap"><span class="cc"><span class="t">Wedding invitation:</span><span>City skyline</span></span><span class="chev" aria-hidden="true">+</span></div></div></summary><div class="more"><p>Custom wedding invitation. Giant Squid Press made a name for itself with high-end custom designed and printed wedding invitations. Gold New York skyline built from dots.</p></div></details>
+<details class="wcard"><summary><div class="ph"><img src="assets/img/083965585889f42d68523bbdb730f9da.jpg" alt="Wedding invitation: Art deco border" width="1250" height="1750"></div><div class="cw"><div class="wcap"><span class="cc"><span class="t">Wedding invitation:</span><span>Art deco border</span></span><span class="chev" aria-hidden="true">+</span></div></div></summary><div class="more"><p>Custom wedding invitation. Giant Squid Press made a name for itself with high-end custom designed and printed wedding invitations. Tall deco type inside a patterned border.</p></div></details>
+      </div>
+    </sc-if>
+
+    <!-- Pharma password portal -->
+    <sc-if value="{{ gate.show }}" hint-placeholder-val="{{ false }}">
+      <div class="gate" role="dialog" aria-label="Password protected portal">
+        <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="#182857" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4.5" y="10.5" width="15" height="10" rx="2"></rect><path d="M8 10.5V7.5a4 4 0 0 1 8 0v3"></path><circle cx="12" cy="15.5" r="1.2" fill="#182857"></circle></svg>
+        <p class="msg">Due to sensitive nature of Pharma work, please enter password to proceed</p>
+        <input class="pw" id="gatepw" type="password" name="pw" autocomplete="off" aria-label="Password" placeholder="Password" onKeyDown="{{ gate.key }}">
+        <button class="go" type="button" onClick="{{ gate.submit }}">Enter</button>
+        <sc-if value="{{ gate.err }}" hint-placeholder-val="{{ false }}"><p class="err" role="alert">That password is not right.</p></sc-if>
+      </div>
+    </sc-if>
+    </div>
+
+    <!-- Lightbox -->
+    <sc-if value="{{ lbv.open }}" hint-placeholder-val="{{ false }}">
+      <div class="lbo" role="dialog" aria-modal="true" aria-label="Image viewer">
+        <button class="lbbd" type="button" onClick="{{ lbv.close }}" aria-label="Close"></button>
+        <button class="lbarr l" type="button" onClick="{{ lbv.prev }}" aria-label="Previous">←</button>
+        <button class="lbarr r" type="button" onClick="{{ lbv.next }}" aria-label="Next">→</button>
+        <button class="lbx" type="button" onClick="{{ lbv.close }}" aria-label="Close">×</button>
+        <div class="lbp" style="background:{{ lbv.bg }}">
+          <img class="{{ lbv.cls }}" src="{{ lbv.src }}" alt="{{ lbv.alt }}" style="mix-blend-mode:{{ lbv.blend }}">
+          <sc-if value="{{ lbv.has2 }}" hint-placeholder-val="{{ false }}"><img class="half" style="margin-top:14px;mix-blend-mode:{{ lbv.blend }}" src="{{ lbv.src2 }}" alt="{{ lbv.alt }}"></sc-if>
+          <div class="lbcap cc"><span class="t">{{ lbv.title }}:</span><span>{{ lbv.short }}</span></div>
+          <sc-if value="{{ lbv.hasCap }}" hint-placeholder-val="{{ false }}"><p class="lbdesc" style="font-weight:600">{{ lbv.cap }}</p></sc-if>
+          <p class="lbdesc" style="margin-bottom:0">{{ lbv.desc }}</p>
+          <div class="lbn">{{ lbv.count }}</div>
+        </div>
+      </div>
+    </sc-if>
+
+  </main>
+
+  <!-- Footer -->
+  <div style="height:7px;background-image:var(--wave-line-navy);background-repeat:repeat-x"></div>
+  <footer style="max-width:1440px;margin:0 auto;padding:56px 40px 28px;box-sizing:border-box">
+    <div class="ft-grid">
+      <div class="ft-c1">
+<div class="ft-brand"><img class="ft-logo" src="assets/img/96ed0ad1ff9d442e81a9d2fccaf5aae4.png" alt="Giant Squid Creative" width="316" height="86">
+        <p class="ft-tag">is a multi-disciplinary design studio doing business in Tokyo, NYC and Florida</p></div>
+      </div>
+      <nav class="ft-nav" aria-label="Footer">
+        <a class="navlink" href="index.html" style="font-family:'Bebas Neue','Franklin Gothic Condensed',sans-serif;font-weight:400;font-size:24px;line-height:1.2;letter-spacing:0.04em;text-transform:uppercase">Home</a>
+        <a class="navlink" href="about.html" style="font-family:'Bebas Neue','Franklin Gothic Condensed',sans-serif;font-weight:400;font-size:24px;line-height:1.2;letter-spacing:0.04em;text-transform:uppercase">About</a>
+        <a class="navlink" href="work.html" style="font-family:'Bebas Neue','Franklin Gothic Condensed',sans-serif;font-weight:400;font-size:24px;line-height:1.2;letter-spacing:0.04em;text-transform:uppercase">Work</a>
+        <a class="navlink" href="contact.html" style="font-family:'Bebas Neue','Franklin Gothic Condensed',sans-serif;font-weight:400;font-size:24px;line-height:1.2;letter-spacing:0.04em;text-transform:uppercase">Contact</a>
+        <a class="navlink" href="#" style="font-family:'Bebas Neue','Franklin Gothic Condensed',sans-serif;font-weight:400;font-size:24px;line-height:1.2;letter-spacing:0.04em;text-transform:uppercase">Instagram</a>
+      </nav>
+      <div class="ft-c3">
+        <label for="ml-email" style="font-weight:600;font-size:17px;letter-spacing:0.04em;text-transform:uppercase;color:#182857">Join the mailing list</label>
+        <form class="ft-form" onSubmit="{{ noop }}">
+          <input class="field" id="ml-email" type="email" placeholder="Email" aria-label="Email" autocomplete="email">
+          <button class="pill" type="submit" style="display:inline-flex;align-items:center;justify-content:center;text-align:center;height:39px;padding:4px 21px 0;border:0;border-radius:999px;background:#182857;color:#ffffff;font-family:var(--font-cond);font-weight:600;font-size:14.25px;line-height:1;letter-spacing:0.04em;text-transform:uppercase">Submit</button>
+        </form>
+      </div>
+    </div>
+    <p class="ft-copy">Website design by <strong style="font-weight:600">Giant Squid Creative</strong> (I thought that was obvious, but... here we are) | Copyright © Kenny Colvin, Giant Squid Creative (formerly Giant Squid Press) 2006–2026.</p>
+  </footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":4000}}'>
+const DATA = {"logos": [{"sp": "sp2", "cat": "logos", "id": "logo-alfredos-pizzeria", "title": "Alfredo's Pizzeria", "short": "Logo", "desc": "Placeholder: add a short description here. What the project was, what we made and who it was for.", "meta": "", "bullets": [], "link": "", "linktext": "", "thumb": "assets/img/8270d04d11c868798a8913cf1bf45491.jpg", "tw": 1800, "th": 685, "images": [{"k": "logo-alfredos-pizzeria", "src": "assets/img/8270d04d11c868798a8913cf1bf45491.jpg", "w": 1800, "h": 685, "cap": ""}]}, {"sp": "sp2", "cat": "logos", "id": "logo-mister-fitz", "title": "Mister Fitz", "short": "Logo", "desc": "Logo for Mister Fitz's Finest Ice Cream. The bow tie shows up again on the packaging.", "meta": "", "bullets": [], "link": "", "linktext": "", "thumb": "assets/img/05a1d8dddeacbbcea976b31c45937657.jpg", "tw": 1800, "th": 882, "images": [{"k": "logo-mister-fitz", "src": "assets/img/05a1d8dddeacbbcea976b31c45937657.jpg", "w": 1800, "h": 882, "cap": ""}]}, {"sp": "sp2", "cat": "logos", "id": "logo-doughnut-time", "title": "Doughnut Time", "short": "Logo", "desc": "Logo for Doughnut Time. The branding took Doughnut Time from a hole-in-the-wall to $16 million in sales.", "meta": "", "bullets": [], "link": "", "linktext": "", "thumb": "assets/img/8c9fa1afbfe664e664470209d6762185.jpg", "tw": 1908, "th": 552, "images": [{"k": "logo-doughnut-time", "src": "assets/img/8c9fa1afbfe664e664470209d6762185.jpg", "w": 1908, "h": 552, "cap": ""}]}, {"sp": "sp2", "cat": "logos", "id": "logo-pkny", "title": "PKNY", "short": "Logo", "desc": "Logo for PKNY, the Painkiller Tiki Bar. Tiki mask, crossed bar tools and a banner with the name.", "meta": "", "bullets": [], "link": "", "linktext": "", "thumb": "assets/img/32780b99c358a5eb8ecb66b0c400d479.jpg", "tw": 1241, "th": 1128, "images": [{"k": "logo-pkny", "src": "assets/img/32780b99c358a5eb8ecb66b0c400d479.jpg", "w": 1241, "h": 1128, "cap": ""}]}, {"sp": "sp2", "cat": "logos", "id": "logo-chester-street", "title": "Chester Street", "short": "Logo", "desc": "Logo for Chester Street Cake Shop.", "meta": "", "bullets": [], "link": "", "linktext": "", "thumb": "assets/img/09f7110acd2f05405be3444c981955bc.jpg", "tw": 1908, "th": 568, "images": [{"k": "logo-chester-street", "src": "assets/img/09f7110acd2f05405be3444c981955bc.jpg", "w": 1908, "h": 568, "cap": ""}]}, {"sp": "sp2", "cat": "logos", "id": "logo-jupiter-disco", "title": "Jupiter Disco", "short": "Logo", "desc": "Placeholder: add a short description here. What the project was, what we made and who it was for.", "meta": "", "bullets": [], "link": "", "linktext": "", "thumb": "assets/img/4a9e9fad19c6adc817b19c83bbdb4939.jpg", "tw": 1039, "th": 365, "images": [{"k": "logo-jupiter-disco", "src": "assets/img/4a9e9fad19c6adc817b19c83bbdb4939.jpg", "w": 1039, "h": 365, "cap": ""}]}, {"sp": "sp2", "cat": "logos", "id": "logo-white-lightning", "title": "White Lightning", "short": "Logo", "desc": "Logo for White Lightning Tiki Bar.", "meta": "", "bullets": [], "link": "", "linktext": "", "thumb": "assets/img/23c1b5fe20d280c48ec35999f36ee9d7.jpg", "tw": 1908, "th": 596, "images": [{"k": "logo-white-lightning", "src": "assets/img/23c1b5fe20d280c48ec35999f36ee9d7.jpg", "w": 1908, "h": 596, "cap": ""}]}, {"sp": "sp2", "cat": "logos", "id": "logo-rebellious-spirits", "title": "Rebellious Spirits", "short": "Logo", "desc": "Logo for Rebellious Spirits, established 2010.", "meta": "", "bullets": [], "link": "", "linktext": "", "thumb": "assets/img/6ddcd0ab8545ac77fc82920244d6d53e.jpg", "tw": 1908, "th": 1440, "images": [{"k": "logo-rebellious-spirits", "src": "assets/img/6ddcd0ab8545ac77fc82920244d6d53e.jpg", "w": 1908, "h": 1440, "cap": ""}]}, {"sp": "sp2", "cat": "logos", "id": "logo-dutch-kills", "title": "Dutch Kills", "short": "Logo", "desc": "Logo for Dutch Kills in Long Island City. Dutch Kills is on our client list as a rebrand.", "meta": "", "bullets": [], "link": "", "linktext": "", "thumb": "assets/img/0f5c68bc3055511936b710ed9e5cc8fa.jpg", "tw": 1908, "th": 868, "images": [{"k": "logo-dutch-kills", "src": "assets/img/0f5c68bc3055511936b710ed9e5cc8fa.jpg", "w": 1908, "h": 868, "cap": ""}]}, {"sp": "sp2", "cat": "logos", "id": "logo-kwan-brothers", "title": "Kwan Brothers", "short": "Logo", "desc": "Placeholder: add a short description here. What the project was, what we made and who it was for.", "meta": "", "bullets": [], "link": "", "linktext": "", "thumb": "assets/img/ff7c00d1bf10b812688d8a3ccca52611.jpg", "tw": 1908, "th": 1349, "images": [{"k": "logo-kwan-brothers", "src": "assets/img/ff7c00d1bf10b812688d8a3ccca52611.jpg", "w": 1908, "h": 1349, "cap": ""}]}, {"sp": "sp2", "cat": "logos", "id": "logo-vanguard", "title": "The Vanguard", "short": "Logo", "desc": "Logo for The Vanguard Beer Garden.", "meta": "", "bullets": [], "link": "", "linktext": "", "thumb": "assets/img/e7fd98d1bee7157e5f95d34bab2f0b42.jpg", "tw": 1798, "th": 715, "images": [{"k": "logo-vanguard", "src": "assets/img/e7fd98d1bee7157e5f95d34bab2f0b42.jpg", "w": 1798, "h": 715, "cap": ""}]}, {"sp": "sp2", "cat": "logos", "id": "logo-les-bubbles", "title": "Les Bubbles", "short": "Logo", "desc": "Logo for Les Bubbles. Tagline on the mark: Quality meat served here since 1982.", "meta": "", "bullets": [], "link": "", "linktext": "", "thumb": "assets/img/5e0d9bd2cd3f9526b12a0db69080b4da.jpg", "tw": 1234, "th": 693, "images": [{"k": "logo-les-bubbles", "src": "assets/img/5e0d9bd2cd3f9526b12a0db69080b4da.jpg", "w": 1234, "h": 693, "cap": ""}]}, {"sp": "sp2", "cat": "logos", "id": "logo-brisbane-city-markets", "title": "Brisbane City Markets", "short": "Logo", "desc": "Placeholder: add a short description here. What the project was, what we made and who it was for.", "meta": "", "bullets": [], "link": "", "linktext": "", "thumb": "assets/img/46423ca0dc7445fa27f8b08751a51523.jpg", "tw": 1796, "th": 925, "images": [{"k": "logo-brisbane-city-markets", "src": "assets/img/46423ca0dc7445fa27f8b08751a51523.jpg", "w": 1796, "h": 925, "cap": ""}]}, {"sp": "", "cat": "logos", "id": "logo-west-end-markets", "title": "West End Markets", "short": "Logo", "desc": "One of the favored logo concepts for West End Markets.", "meta": "", "bullets": [], "link": "", "linktext": "", "thumb": "assets/img/c861c63c007f3aa8be6910ef02b510f5.jpg", "tw": 1800, "th": 1664, "images": [{"k": "logo-west-end-markets", "src": "assets/img/c861c63c007f3aa8be6910ef02b510f5.jpg", "w": 1800, "h": 1664, "cap": ""}]}, {"sp": "sp2", "cat": "logos", "id": "logo-bond", "title": "The Markets at Bond", "short": "Logo", "desc": "Logo for The Markets at Bond. Tagline: Food, farmers, lifestyle.", "meta": "", "bullets": [], "link": "", "linktext": "", "thumb": "assets/img/22d8ff3776ff7fe1e61ab9354ddf66af.jpg", "tw": 1800, "th": 909, "images": [{"k": "logo-bond", "src": "assets/img/22d8ff3776ff7fe1e61ab9354ddf66af.jpg", "w": 1800, "h": 909, "cap": ""}]}, {"sp": "sp2", "cat": "logos", "id": "logo-alfred-constance", "title": "Alfred & Constance", "short": "Logo", "desc": "Placeholder: add a short description here. What the project was, what we made and who it was for.", "meta": "", "bullets": [], "link": "", "linktext": "", "thumb": "assets/img/06461ef84ca4f9ac0be33969b19bb1fe.jpg", "tw": 1582, "th": 1316, "images": [{"k": "logo-alfred-constance", "src": "assets/img/06461ef84ca4f9ac0be33969b19bb1fe.jpg", "w": 1582, "h": 1316, "cap": ""}]}, {"sp": "", "cat": "logos", "id": "logo-alfred-constance-monogram", "title": "Alfred & Constance", "short": "Logo", "desc": "Monogram for Alfred & Constance.", "meta": "", "bullets": [], "link": "", "linktext": "", "thumb": "assets/img/071e78096909113bfb8b5620ada6ed10.jpg", "tw": 1797, "th": 1797, "images": [{"k": "logo-alfred-constance-monogram", "src": "assets/img/071e78096909113bfb8b5620ada6ed10.jpg", "w": 1797, "h": 1797, "cap": ""}]}, {"sp": "sp2", "cat": "logos", "id": "logo-rooftop-limes", "title": "The Rooftop at Limes Hotel", "short": "Logo", "desc": "Logo for The Rooftop at Limes Hotel.", "meta": "", "bullets": [], "link": "", "linktext": "", "thumb": "assets/img/1cd5563c0b03cac5047fda9608b29805.jpg", "tw": 1908, "th": 456, "images": [{"k": "logo-rooftop-limes", "src": "assets/img/1cd5563c0b03cac5047fda9608b29805.jpg", "w": 1908, "h": 456, "cap": ""}], "hover": "assets/img/3dfbf92f1a7a20b79bd4595deaa052b0.jpg", "also": [{"k": "logo-rooftop-limes-red", "src": "assets/img/3dfbf92f1a7a20b79bd4595deaa052b0.jpg", "w": 1908, "h": 739, "cap": ""}]}, {"sp": "sp2", "cat": "logos", "id": "logo-astoria-bookshop", "title": "Astoria Bookshop", "short": "Logo", "desc": "Placeholder: add a short description here. What the project was, what we made and who it was for.", "meta": "", "bullets": [], "link": "", "linktext": "", "thumb": "assets/img/37c6863b1dc7ae7a16e5da04085a08e3.jpg", "tw": 1908, "th": 517, "images": [{"k": "logo-astoria-bookshop", "src": "assets/img/37c6863b1dc7ae7a16e5da04085a08e3.jpg", "w": 1908, "h": 517, "cap": ""}]}, {"sp": "", "cat": "logos", "id": "logo-astoria-monogram", "title": "Astoria Bookshop", "short": "Logo", "desc": "Monogram for Astoria Bookshop.", "meta": "", "bullets": [], "link": "", "linktext": "", "thumb": "assets/img/b542668510cdb993f98a1e644c2ee60b.jpg", "tw": 1579, "th": 1529, "images": [{"k": "logo-astoria-monogram", "src": "assets/img/b542668510cdb993f98a1e644c2ee60b.jpg", "w": 1579, "h": 1529, "cap": ""}]}, {"sp": "sp2", "cat": "logos", "id": "logo-city-antiques", "title": "City Antiques", "short": "Logo", "desc": "Placeholder: add a short description here. What the project was, what we made and who it was for.", "meta": "", "bullets": [], "link": "", "linktext": "", "thumb": "assets/img/5a9150863a22e8897b519950640e1e6d.jpg", "tw": 1800, "th": 317, "images": [{"k": "logo-city-antiques", "src": "assets/img/5a9150863a22e8897b519950640e1e6d.jpg", "w": 1800, "h": 317, "cap": ""}]}, {"sp": "sp2", "cat": "logos", "id": "logo-natalie-jacob", "title": "Natalie Jacob", "short": "Logo", "desc": "Logo for Natalie Jacob, bartender and consultant.", "meta": "", "bullets": [], "link": "", "linktext": "", "thumb": "assets/img/9a1883e01aacccc0ec87a29e0f137631.jpg", "tw": 1800, "th": 1028, "images": [{"k": "logo-natalie-jacob", "src": "assets/img/9a1883e01aacccc0ec87a29e0f137631.jpg", "w": 1800, "h": 1028, "cap": ""}]}, {"sp": "", "cat": "logos", "id": "logo-zgr", "title": "ZGR", "short": "Logo", "desc": "Placeholder: add a short description here. What the project was, what we made and who it was for.", "meta": "", "bullets": [], "link": "", "linktext": "", "thumb": "assets/img/c6234eb2e7f7d032c436c478fdd4f5cc.jpg", "tw": 1800, "th": 1782, "images": [{"k": "logo-zgr", "src": "assets/img/c6234eb2e7f7d032c436c478fdd4f5cc.jpg", "w": 1800, "h": 1782, "cap": ""}]}, {"sp": "sp2", "cat": "logos", "id": "logo-18-eckford", "title": "18 Eckford", "short": "Logo", "desc": "Logo for 18 Eckford, First Wood Showroom.", "meta": "", "bullets": [], "link": "", "linktext": "", "thumb": "assets/img/24a51f3a7812995443378e4537db5419.jpg", "tw": 1433, "th": 333, "images": [{"k": "logo-18-eckford", "src": "assets/img/24a51f3a7812995443378e4537db5419.jpg", "w": 1433, "h": 333, "cap": ""}]}], "ui": [{"sp": "sp2", "cat": "ui", "id": "ui-dt", "title": "Doughnut Time", "short": "Responsive Website UI/UX", "desc": "Doughnut Time website, desktop and mobile. Branding that took Doughnut Time from a hole-in-the-wall to $16 million in sales.", "meta": "", "bullets": [], "link": "", "linktext": "", "thumb": "assets/img/1fd44a5aad18219d3df260e5906def6d.jpg", "tw": 1800, "th": 1084, "images": [{"k": "ui-dt-devices", "src": "assets/img/1fd44a5aad18219d3df260e5906def6d.jpg", "w": 1800, "h": 1084, "cap": "Desktop at 1440px, iPad at 820px and mobile at 390px."}, {"k": "ui-dt-full", "src": "assets/img/7be3e92092c66f45ba4f52716992349e.jpg", "w": 1614, "h": 2576, "cap": "Full home page, desktop at 1440px and mobile at 390px."}]}, {"sp": "sp2", "cat": "ui", "id": "ui-fitz", "title": "Mister Fitz's", "short": "UI/UX Website design", "desc": "Designed UX and site structure for the e-commerce mobile optimized site.", "meta": "", "bullets": [], "link": "", "linktext": "", "thumb": "assets/img/721a9ca977fba1772d07986409a45100.jpg", "tw": 1800, "th": 1125, "images": [{"k": "ui-fitz-devices", "src": "assets/img/721a9ca977fba1772d07986409a45100.jpg", "w": 1800, "h": 1125, "cap": "Home page on desktop and the menu page on tablet and mobile."}, {"k": "ui-fitz-full", "src": "assets/img/ef0549976b4e0bd047d04e4ba7b224d5.jpg", "w": 1725, "h": 2589, "cap": "Home page, menu page and mobile home page in full."}]}, {"sp": "sp2", "cat": "ui", "id": "ui-limes", "title": "Limes Hotel", "short": "Responsive Website development", "desc": "Website for Limes Hotel in Fortitude Valley, Brisbane. UX and site structure, built as an SEO-optimized responsive site for desktop, tablet and mobile.", "meta": "", "bullets": [], "link": "", "linktext": "", "thumb": "assets/img/bf214970f58fd92ecff7abe7fc2ccaf1.jpg", "tw": 1800, "th": 795, "images": [{"k": "ui-limes-devices", "src": "assets/img/bf214970f58fd92ecff7abe7fc2ccaf1.jpg", "w": 1800, "h": 795, "cap": "Desktop, tablet and mobile."}, {"k": "ui-limes-full", "src": "assets/img/bfb2b1e2971ac9f6528193c9fdbdecc6.jpg", "w": 1315, "h": 2576, "cap": "Full home page."}]}], "posters": [{"sp": "", "cat": "posters", "id": "poster-bouncing-souls", "title": "Bouncing Souls", "short": "Concert poster", "desc": "Come See Coney Island! Bouncing Souls, The Ergs and Static Radio NJ at Cha Cha's, August 20, 2007. Printed credit: Poster by Giant Squid Press.", "meta": "", "bullets": [], "link": "", "linktext": "", "thumb": "assets/img/992dcc952de1b1eb45a82386767f3292.jpg", "tw": 900, "th": 1232, "images": [{"k": "poster-bouncing-souls", "src": "assets/img/992dcc952de1b1eb45a82386767f3292.jpg", "w": 900, "h": 1232, "cap": ""}]}, {"sp": "", "cat": "posters", "id": "poster-gaslight-anthem", "title": "The Gaslight Anthem", "short": "Concert poster", "desc": "The Gaslight Anthem with Pela and Good Old War at The Stone Pony, May 8 and 9, 2009. Both nights sold out.", "meta": "", "bullets": [], "link": "", "linktext": "", "thumb": "assets/img/ed26edeb89d56448f940844fd8c357f4.jpg", "tw": 900, "th": 1293, "images": [{"k": "poster-gaslight-anthem", "src": "assets/img/ed26edeb89d56448f940844fd8c357f4.jpg", "w": 900, "h": 1293, "cap": ""}]}, {"sp": "", "cat": "posters", "id": "poster-sanita-diner-brunch", "title": "Sanita Tokyo", "short": "Poster, weekend brunch", "desc": "Diner Style Weekend Brunch at Sanita, every Saturday and Sunday from 12 to 4PM. Bilingual English and Japanese.", "meta": "", "bullets": [], "link": "", "linktext": "", "thumb": "assets/img/4b6cb032f08ba25879d0912bf7ad793f.jpg", "tw": 900, "th": 1261, "images": [{"k": "poster-sanita-diner-brunch", "src": "assets/img/4b6cb032f08ba25879d0912bf7ad793f.jpg", "w": 900, "h": 1261, "cap": ""}]}, {"sp": "", "cat": "posters", "id": "poster-sanita-brunch", "title": "Sanita Tokyo", "short": "Poster, Sanita Grocery", "desc": "Brunch at Sanita, Saturday and Sunday from 12PM to 4PM. Bacon, egg and cheese or the Smashburger, set in a deli storefront.", "meta": "", "bullets": [], "link": "", "linktext": "", "thumb": "assets/img/27e97f86439fb326aa38db69d06702ac.jpg", "tw": 900, "th": 1264, "images": [{"k": "poster-sanita-brunch", "src": "assets/img/27e97f86439fb326aa38db69d06702ac.jpg", "w": 900, "h": 1264, "cap": ""}]}, {"sp": "", "cat": "posters", "id": "poster-sanita-wilkie", "title": "Sanita Tokyo", "short": "Poster, pop-up", "desc": "Wilkie Wines pop-up at Sanita, Friday May 23rd from 8PM until sold out. Wines from Geelong, Australia, pouring their entire portfolio (mostly).", "meta": "", "bullets": [], "link": "", "linktext": "", "thumb": "assets/img/daf45d2d17e745e320d13dea62400c4b.jpg", "tw": 900, "th": 1258, "images": [{"k": "poster-sanita-wilkie", "src": "assets/img/daf45d2d17e745e320d13dea62400c4b.jpg", "w": 900, "h": 1258, "cap": ""}]}, {"sp": "", "cat": "posters", "id": "poster-sanita-deux-punx", "title": "Sanita Tokyo", "short": "Poster, live night", "desc": "Deux Punx and friends at Sanita, Monday May 12 at 8PM. Live and raw.", "meta": "", "bullets": [], "link": "", "linktext": "", "thumb": "assets/img/067bc9e78bddad8461a39605dfb48cc1.jpg", "tw": 900, "th": 1260, "images": [{"k": "poster-sanita-deux-punx", "src": "assets/img/067bc9e78bddad8461a39605dfb48cc1.jpg", "w": 900, "h": 1260, "cap": ""}]}], "packaging": [{"sp": "sp2", "cat": "packaging", "id": "dt-prepress", "title": "Doughnut Time", "short": "Pre-press", "desc": "Dielines and printer proofs for the Doughnut Time doughnut boxes, built for the printer in Australia.", "meta": "", "bullets": [], "link": "", "linktext": "", "thumb": "assets/img/755d7501f867f9c0f60e14f7746a23c3.jpg", "tw": 1054, "th": 615, "images": [{"k": "dt-dieline-proof", "src": "assets/img/755d7501f867f9c0f60e14f7746a23c3.jpg", "w": 1054, "h": 615, "cap": "Printer proof for the Doughnut Time one-pack box. 130 x 110 x 60mm, PMS 344 U with black, magenta and 50% black, proofed with Sota Packaging."}, {"k": "dt-dieline-green", "src": "assets/img/d63132bb3edb4da88e93d0f078e10bce.jpg", "w": 406, "h": 621, "cap": "Dieline artwork for a Doughnut Time doughnut box, shown in the mint green colorway with the Instagram handle on the lid."}, {"k": "dt-dieline-white", "src": "assets/img/c46f85fc6de8c369c13b63d51470091d.jpg", "w": 396, "h": 621, "cap": "The same box structure on a white board with the pink and blue logo and the line: It's always a good time!"}]}, {"sp": "sp2", "cat": "packaging", "id": "dt-packaging", "title": "Doughnut Time", "short": "Packaging", "desc": "The finished Doughnut Time boxes. The branding took Doughnut Time from a hole-in-the-wall to $16 million in sales.", "meta": "", "bullets": [], "link": "", "linktext": "", "thumb": "assets/img/7f8ce4dd1087a0b3245de792b2e1ed5d.jpg", "tw": 450, "th": 285, "images": [{"k": "dt-box-photo-1", "src": "assets/img/7f8ce4dd1087a0b3245de792b2e1ed5d.jpg", "w": 450, "h": 285, "cap": "The finished box with six doughnuts inside."}, {"k": "dt-box-photo-2", "src": "assets/img/22f53154d9e619630d6ddea758477a83.jpg", "w": 450, "h": 314, "cap": "The finished box in hand, lid open."}, {"k": "dt-hold-photo", "src": "assets/img/1adc072154f62938c281495f3e5d44e8.jpg", "w": 392, "h": 346, "cap": "The one-pack box printed in mint green with the doughnut shaped window."}, {"k": "dt-hands-photo", "src": "assets/img/3f5722e3c95bbb36c2cec68a2bf55ac5.jpg", "w": 392, "h": 256, "cap": "One-pack boxes being handed out."}]}, {"sp": "sp2", "cat": "packaging", "id": "mf-prepress", "title": "Mister Fitz's", "short": "Pre-press", "desc": "Dieline and polka dot pattern for the Mister Fitz's ice cream sleeve.", "meta": "", "bullets": [], "link": "", "linktext": "", "thumb": "assets/img/6eb07c280860ab93fb68f339b53fbf1d.jpg", "tw": 751, "th": 367, "images": [{"k": "misterfitz-dieline", "src": "assets/img/6eb07c280860ab93fb68f339b53fbf1d.jpg", "w": 751, "h": 367, "cap": "Dieline and polka dot pattern for the Mister Fitz's ice cream sleeve. The mascot and the #MISTERFITZ hashtag sit on the front panel."}]}, {"sp": "sp2", "cat": "packaging", "id": "mf-packaging", "title": "Mister Fitz's", "short": "Packaging", "desc": "The printed sleeve for Mister Fitz's Famous Ice Cream.", "meta": "", "bullets": [], "link": "", "linktext": "", "thumb": "assets/img/5fea4abb402008a63cd22ae37e56eb55.jpg", "tw": 558, "th": 367, "images": [{"k": "misterfitz-photo", "src": "assets/img/5fea4abb402008a63cd22ae37e56eb55.jpg", "w": 558, "h": 367, "cap": "The printed sleeve in use, holding a Mister Fitz's ice cream sandwich."}]}, {"sp": "sp2", "cat": "packaging", "id": "gaslight-vinyl", "title": "The Gaslight Anthem", "short": "Vinyl EP", "desc": "Señor and the Queen EP, a Sabot Productions release, on orange 45 vinyl. Credits in the booklet read: Designed by Kenny Colvin.", "meta": "", "bullets": [], "link": "", "linktext": "", "thumb": "assets/img/3d3c97bfb1b7833554215e72d91d03c4.jpg", "tw": 1200, "th": 598, "images": [{"k": "gaslight-ep-cover", "src": "assets/img/3d3c97bfb1b7833554215e72d91d03c4.jpg", "w": 1200, "h": 598, "cap": "Full cover wrap for the Señor and the Queen EP, a Sabot Productions release. Photobooth portrait on the front and a pointing hand with the track list on the back."}, {"k": "gaslight-ep-spread", "src": "assets/img/15b4ea644add66d01f7138ef23342ac1.jpg", "w": 1400, "h": 569, "cap": "Inside spread of the booklet with the orange 45 vinyl. Credits in the booklet read: Designed by Kenny Colvin."}]}, {"sp": "sp2", "cat": "packaging", "id": "gaslight-cd", "title": "The Gaslight Anthem", "short": "CD jewel case", "desc": "Booklet, sleeve and label artwork for the Señor and the Queen EP, printed on kraft stock.", "meta": "", "bullets": [], "link": "", "linktext": "", "thumb": "assets/img/e35de4a3486ed6baa5fb1092d6f99359.jpg", "tw": 457, "th": 231, "images": [{"k": "gaslight-ep-1", "src": "assets/img/e35de4a3486ed6baa5fb1092d6f99359.jpg", "w": 457, "h": 231, "cap": "Cover panel and track list panel of the EP booklet."}, {"k": "gaslight-ep-2", "src": "assets/img/9d25538bb55c0d3bd18055de0c6c225b.jpg", "w": 458, "h": 231, "cap": "Lyric panels for Señor and the Queen and Wherefore Art Thou, Elvis?"}, {"k": "gaslight-ep-3", "src": "assets/img/676b036c3c307b63ce7b82352df20f92.jpg", "w": 458, "h": 230, "cap": "Lyric panels for Say I Won't (Recognize) and Blue Jeans & White T-Shirts."}, {"k": "gaslight-ep-4", "src": "assets/img/3f2c8c6c5b94d404eba82b6c4007440f.jpg", "w": 459, "h": 230, "cap": "Credits panel with the ferris wheel illustration."}, {"k": "gaslight-ep-5", "src": "assets/img/f62622f17710501c0b4d791e6f99fb62.jpg", "w": 300, "h": 236, "cap": "Mandala pattern printed on the inside of the sleeve."}, {"k": "gaslight-ep-6", "src": "assets/img/1326f5c0fe1377a5ad3b29994c03248d.jpg", "w": 301, "h": 236, "cap": "Back of the sleeve with the track list on a pointing hand."}, {"k": "gaslight-ep-7", "src": "assets/img/57ee4b0b631236951b8a9ec1d20cf190.jpg", "w": 300, "h": 236, "cap": "Sabot Productions label for the 33 RPM extended play."}]}, {"sp": "", "cat": "packaging", "id": "lucero-lp", "title": "Lucero", "short": "LP", "desc": "Rebels, Rogues & Sworn Brothers, remastered on dual vinyl in a gatefold jacket.", "meta": "", "bullets": [], "link": "", "linktext": "", "thumb": "assets/img/4d903b054b9c963c55b2969bbb5115db.jpg", "tw": 604, "th": 605, "images": [{"k": "lucero-cover", "src": "assets/img/4d903b054b9c963c55b2969bbb5115db.jpg", "w": 604, "h": 605, "cap": "Rebels, Rogues & Sworn Brothers, remastered on dual vinyl in a gatefold jacket. Includes a free digital download code."}, {"k": "lucero-gatefold", "src": "assets/img/97c36f8868b3f9fa0e230465ff64e985.jpg", "w": 1175, "h": 604, "cap": "Inside of the gatefold jacket with the lyric sheets, band photo and credits."}, {"k": "lucero-detail-1", "src": "assets/img/8516b05320f50fe8797432326c814b84.jpg", "w": 291, "h": 290, "cap": "Close-up of the lyric sheet with the ship, brass knuckles and sextant illustrations."}, {"k": "lucero-detail-2", "src": "assets/img/32dc1b50dcdafbdf5df616fbb5f84f00.jpg", "w": 291, "h": 291, "cap": "Close-up of the anchor illustration on the lyric sheet."}]}, {"sp": "", "cat": "packaging", "id": "fp-ng-7", "title": "Fake Problems / Ninja Gun", "short": "7-inch", "desc": "Split 7-inch on Sabot Productions (ACT023). Silver ink on black board with spirograph flowers, designed and letterpress printed in house.", "meta": "", "bullets": [], "link": "", "linktext": "", "thumb": "assets/img/5352c06af39219574ec557590375b868.jpg", "tw": 610, "th": 606, "images": [{"k": "fake-problems-front", "src": "assets/img/5352c06af39219574ec557590375b868.jpg", "w": 610, "h": 606, "cap": "Split 7-inch on Sabot Productions (ACT023). Silver ink on black board with spirograph flowers."}, {"k": "fake-problems-back", "src": "assets/img/21c842e6abc82440e908026a39a25262.jpg", "w": 611, "h": 606, "cap": "Back of the sleeve with the credits. The printed credit reads: Design & Printing by GiantSquidLetterpress.com."}, {"k": "fake-problems-press-1", "src": "assets/img/048e417ee6e8e89bca1c8a00d4b7187c.jpg", "w": 373, "h": 280, "cap": "The plates locked up on the letterpress."}, {"k": "fake-problems-press-2", "src": "assets/img/ad68b416883209b9b3d5e384785bb879.jpg", "w": 373, "h": 280, "cap": "A die-cut sleeve coming off the press."}]}, {"sp": "sp2", "cat": "packaging", "id": "ikebana", "title": "Ikebana", "short": "Skin care", "desc": "Placeholder: add a short description here. What the project was, what we made and who it was for.", "meta": "", "bullets": [], "link": "", "linktext": "", "thumb": "assets/img/51b991740f317541bfd1e4c4d1908754.jpg", "tw": 1000, "th": 700, "images": [{"k": "ikebana-placeholder", "src": "assets/img/51b991740f317541bfd1e4c4d1908754.jpg", "w": 1000, "h": 700, "cap": "Placeholder: Ikebana packaging photos to come."}]}, {"sp": "", "cat": "packaging", "id": "production", "title": "Production", "short": "Die line, spot varnish, emboss and deboss", "desc": "Dielines, spot layers and printer templates behind finished pieces. Placeholder: deboss and letterpress imprint photos to be added.", "meta": "", "bullets": [], "link": "", "linktext": "", "thumb": "assets/img/273e9db2e62e0848ddd5c6f2b77359f8.jpg", "tw": 900, "th": 1798, "images": [{"k": "dt-emboss-easter-1", "src": "assets/img/273e9db2e62e0848ddd5c6f2b77359f8.jpg", "w": 900, "h": 1798, "cap": "Doughnut Time four-pack box dieline, Easter colorway. The production file is built in five PMS colors with an emboss layer."}, {"k": "dt-emboss-easter-2", "src": "assets/img/5dc5885538c97d4a24b2ba333e910d56.jpg", "w": 900, "h": 1798, "cap": "The same four-pack structure as a blank dieline."}, {"k": "dt-emboss-xmas-1", "src": "assets/img/0caea908bc343da6197d029d576c9b73.jpg", "w": 900, "h": 1364, "cap": "Doughnut Time six-pack box dieline, Christmas 2016 colorway in red, with an emboss layer."}, {"k": "alf-wrapper-1", "src": "assets/img/8d9337b9822b703770601c23195168e9.jpg", "w": 1300, "h": 1839, "cap": "Printer template for the Alfredo's Pizzeria condom sleeve, outside. Fold, trim, bleed and safe lines are marked."}, {"k": "alf-wrapper-2", "src": "assets/img/565e7841ba43b5d7c9caa8a875c0184e.jpg", "w": 1300, "h": 1839, "cap": "The same template, inside, with the folding instructions."}, {"k": "wed-folder-1", "src": "assets/img/71af51069c2825662c7f6e7c416aec6b.jpg", "w": 1300, "h": 1090, "cap": "Die line for a wedding invitation folder, outside."}, {"k": "wed-folder-2", "src": "assets/img/d5b21116237714225661690387dd17ab.jpg", "w": 1300, "h": 1090, "cap": "Die line for the wedding invitation folder, inside."}]}], "menus": [{"sp": "", "cat": "menus", "id": "m-sanita", "title": "Sanita", "short": "Spring 2025 menu", "desc": "Full menu for Sanita Tokyo, spring 2025. A4, five pages.", "meta": "", "bullets": [], "link": "", "linktext": "", "thumb": "assets/img/045d1a439c348aa919426033011e2849.jpg", "tw": 1100, "th": 1556, "images": [{"k": "sanita-1", "src": "assets/img/045d1a439c348aa919426033011e2849.jpg", "w": 1100, "h": 1556, "cap": "Page 1 of 5"}, {"k": "sanita-2", "src": "assets/img/06b009ebd68c723b309e2a13333a64b3.jpg", "w": 1100, "h": 1556, "cap": "Page 2 of 5"}, {"k": "sanita-3", "src": "assets/img/48e55c171b391062340eee1b647636df.jpg", "w": 1100, "h": 1556, "cap": "Page 3 of 5"}, {"k": "sanita-4", "src": "assets/img/d5d1a11bc63dccf971006e49474f1a41.jpg", "w": 1100, "h": 1556, "cap": "Page 4 of 5"}, {"k": "sanita-5", "src": "assets/img/9f542f098337365f9441e94a121de3db.jpg", "w": 1100, "h": 1556, "cap": "Page 5 of 5"}]}, {"sp": "", "cat": "menus", "id": "m-alfredos", "title": "Alfredo's Pizzeria", "short": "Spring 2016 menu", "desc": "Spring 2016 menu for Alfredo's Pizzeria, A4, four pages. This is revision 10, with the new wine list.", "meta": "", "bullets": [], "link": "", "linktext": "", "thumb": "assets/img/19a739fab61d65c814b172559b3485d7.jpg", "tw": 1100, "th": 1556, "images": [{"k": "alf-1", "src": "assets/img/19a739fab61d65c814b172559b3485d7.jpg", "w": 1100, "h": 1556, "cap": "Page 1 of 4"}, {"k": "alf-2", "src": "assets/img/66233fb4303caea746f7ac6cd72354c2.jpg", "w": 1100, "h": 1556, "cap": "Page 2 of 4"}, {"k": "alf-3", "src": "assets/img/a92c64b6be5f915b402b236ac6775a41.jpg", "w": 1100, "h": 1556, "cap": "Page 3 of 4"}, {"k": "alf-4", "src": "assets/img/259a35b32a3de6d165ecfadeeb6d7a70.jpg", "w": 1100, "h": 1556, "cap": "Page 4 of 4"}]}, {"sp": "", "cat": "menus", "id": "m-chester", "title": "Chester Street", "short": "Menus", "desc": "Breakfast, lunch and dinner, and wine and cocktail menus for Chester Street in Newstead, Brisbane. All three are set in the same blue tile border.", "meta": "", "bullets": [], "link": "", "linktext": "", "thumb": "assets/img/f954fc6e9af02c040950707ad6cab239.jpg", "tw": 1697, "th": 2400, "images": [{"k": "menu-chester-breakfast", "src": "assets/img/f954fc6e9af02c040950707ad6cab239.jpg", "w": 1697, "h": 2400, "cap": "Breakfast menu for Chester Street in Newstead, Brisbane. Printed with the blue tile border used across the set."}, {"k": "menu-chester-dinner", "src": "assets/img/f5834466b10225416c9c800fc5afb964.jpg", "w": 1697, "h": 2400, "cap": "Lunch and dinner menu for Chester Street, set in the same blue tile border."}, {"k": "menu-chester-wine-cocktails", "src": "assets/img/cdb20e4341b21171ff13c89339511b12.jpg", "w": 1697, "h": 2400, "cap": "Wine, beer and cocktail menu for Chester Street."}]}, {"sp": "sp2", "cat": "menus", "id": "m-kwan", "title": "Kwan Brothers", "short": "Takeout menu, Fall 2015", "desc": "Takeout menu for Kwan Brothers, A3, two pages.", "meta": "", "bullets": [], "link": "", "linktext": "", "thumb": "assets/img/d9cbf2c42d62325f596e687605582c3b.jpg", "tw": 2400, "th": 1698, "images": [{"k": "kwan-1", "src": "assets/img/d9cbf2c42d62325f596e687605582c3b.jpg", "w": 2400, "h": 1698, "cap": "Page 1 of 2"}, {"k": "kwan-2", "src": "assets/img/2253314124a00e9c83a32ed936e97f64.jpg", "w": 2400, "h": 1698, "cap": "Page 2 of 2"}]}, {"sp": "sp2", "cat": "menus", "id": "m-whitelightning", "title": "White Lightning", "short": "Tiki menus", "desc": "Menus for White Lightning Tiki Bar. The first two pages are the landscape A4 menu. The last two are the Summer 2013 menu.", "meta": "", "bullets": [], "link": "", "linktext": "", "thumb": "assets/img/f6d00cce2d6366214c34eb594e5fb18d.jpg", "tw": 1300, "th": 920, "images": [{"k": "wl1-1", "src": "assets/img/f6d00cce2d6366214c34eb594e5fb18d.jpg", "w": 1300, "h": 920, "cap": "Landscape menu, page 1 of 2"}, {"k": "wl1-2", "src": "assets/img/8e35a86af37d7a919d344f4c76446e54.jpg", "w": 1300, "h": 920, "cap": "Landscape menu, page 2 of 2"}, {"k": "wl2-1", "src": "assets/img/ce6bf4408c9b7703941539b2d4730f84.jpg", "w": 1855, "h": 2400, "cap": "Summer 2013 menu, page 1 of 2"}, {"k": "wl2-2", "src": "assets/img/e5633242ab9e73a81acbfd7b8f882f2b.jpg", "w": 1855, "h": 2400, "cap": "Summer 2013 menu, page 2 of 2"}]}, {"sp": "", "cat": "menus", "id": "m-rooftop", "title": "The Rooftop at Limes Hotel", "short": "Menu", "desc": "Newspaper-style menu for the rooftop bar at Limes Hotel in Fortitude Valley. The cover headline reads Hot Summer Flesh.", "meta": "", "bullets": [], "link": "", "linktext": "", "thumb": "assets/img/a5e2b8c135bda9dd733453e6dac64d46.jpg", "tw": 595, "th": 841, "images": [{"k": "rooftop-front", "src": "assets/img/a5e2b8c135bda9dd733453e6dac64d46.jpg", "w": 595, "h": 841, "cap": "Front page: Hot Summer Flesh, Fortitude Valley, Late Edition"}, {"k": "rooftop-cocktail", "src": "assets/img/0a2c009c9dbab9740eb0f60888463c3e.jpg", "w": 595, "h": 841, "cap": "Cocktail Exclusive and the wine list"}]}, {"sp": "", "cat": "menus", "id": "m-vanguard", "title": "The Vanguard", "short": "Autumn 2013 menu", "desc": "Food menu for The Vanguard Beer Garden.", "meta": "", "bullets": [], "link": "", "linktext": "", "thumb": "assets/img/446290c049201cfc982e9881335a15d0.jpg", "tw": 1855, "th": 2400, "images": [{"k": "menu-vanguard", "src": "assets/img/446290c049201cfc982e9881335a15d0.jpg", "w": 1855, "h": 2400, "cap": ""}]}, {"sp": "", "cat": "menus", "id": "m-vanguard16", "title": "The Vanguard", "short": "Summer 2016 menu", "desc": "Summer 2016 food and drink menu for The Vanguard Beer Garden. Four A4 pages: the cover, food, desserts and cocktails, and beer and wine.", "meta": "", "bullets": [], "link": "", "linktext": "", "thumb": "assets/img/1dd978ec52302d98e7d7b3ca389c79a0.jpg", "tw": 1697, "th": 2400, "images": [{"k": "vanguard16-1", "src": "assets/img/1dd978ec52302d98e7d7b3ca389c79a0.jpg", "w": 1697, "h": 2400, "cap": "Cover. Summer 2016."}, {"k": "vanguard16-2", "src": "assets/img/1475c334788a132337addc551074006a.jpg", "w": 1697, "h": 2400, "cap": "Starters and Share Plates, Burgers, Meat and Mains, and Salads."}, {"k": "vanguard16-3", "src": "assets/img/aa4c6482cf65ab4f0df96bebaace9e45.jpg", "w": 1697, "h": 2400, "cap": "Dessert, Cocktails, Mojito Jugs and Tiki Cocktails."}, {"k": "vanguard16-4", "src": "assets/img/8393b664e3946e886e3822c994b91f0f.jpg", "w": 1697, "h": 2400, "cap": "Beer and Cider, Champagne and Sparkling, White, Red and Rosé."}]}, {"sp": "", "cat": "menus", "id": "m-lillet", "title": "Lillet", "short": "Menus", "desc": "Two Lillet Rosé cocktail menus for William Grant & Sons. Credit printed on the menus: Menu designed by Amanda Boccato, Lillet Brand Ambassador | USA.", "meta": "", "bullets": [], "link": "", "linktext": "", "thumb": "assets/img/0155a7fea9c633484eeca673dc172d34.jpg", "tw": 1947, "th": 2400, "images": [{"k": "menu-lillet-1", "src": "assets/img/0155a7fea9c633484eeca673dc172d34.jpg", "w": 1947, "h": 2400, "cap": "First layout"}, {"k": "menu-lillet-2", "src": "assets/img/3cdfd65f9d75a6ce4bfd0c6554a98192.jpg", "w": 1920, "h": 2400, "cap": "Second layout, Bonjour Rosé, with a vintage engraved illustration"}]}, {"sp": "", "cat": "menus", "id": "m-sweetleaf", "title": "Sweetleaf", "short": "Menus", "desc": "Menu for Sweetleaf in Long Island City. Sections for happy hour cocktails, Primetime, a business lunch special and a Martini and Manhattan list, plus the black cocktail and wine menu.", "meta": "", "bullets": [], "link": "", "linktext": "", "thumb": "assets/img/db3cd89bbe959e3b1699d9a744c861b1.jpg", "tw": 1886, "th": 2401, "images": [{"k": "menu-sweetleaf", "src": "assets/img/db3cd89bbe959e3b1699d9a744c861b1.jpg", "w": 1886, "h": 2401, "cap": "Menu for Sweetleaf in Long Island City. Sections for happy hour cocktails, Primetime, a business lunch special and a Martini and Manhattan list."}, {"k": "menu-cocktail-wine-black", "src": "assets/img/1c23443941b9e772361172d7918758e2.jpg", "w": 2400, "h": 1697, "cap": "Cocktail and wine menu"}]}, {"sp": "", "cat": "menus", "id": "m-service", "title": "Service Entrance", "short": "Cocktail menu", "desc": "Placeholder: add a short description here. What the project was, what we made and who it was for.", "meta": "", "bullets": [], "link": "", "linktext": "", "thumb": "assets/img/c044ecd8fbef9e36237152f1ed5e3b3c.jpg", "tw": 1692, "th": 2401, "images": [{"k": "menu-service-entrance", "src": "assets/img/c044ecd8fbef9e36237152f1ed5e3b3c.jpg", "w": 1692, "h": 2401, "cap": ""}]}, {"sp": "", "cat": "menus", "id": "m-dk6", "title": "Dutch Kills", "short": "6th edition, summer 2012", "desc": "Sixth edition of the Dutch Kills cocktail, beer and wine menu, summer 2012. Sixteen single pages, including the Sipping Spirits section.", "meta": "", "bullets": [], "link": "", "linktext": "", "thumb": "assets/img/622911929893fda7a70d40f57c5cd7d4.jpg", "tw": 1553, "th": 2400, "images": [{"k": "dk6-01", "src": "assets/img/622911929893fda7a70d40f57c5cd7d4.jpg", "w": 1553, "h": 2400, "cap": "Page 1 of 16"}, {"k": "dk6-02", "src": "assets/img/fe05585e413f17b4e87450683dd50b2d.jpg", "w": 1553, "h": 2400, "cap": "Page 2 of 16"}, {"k": "dk6-03", "src": "assets/img/a90b688fa59e839a5bcdee4dcabb0ab2.jpg", "w": 1553, "h": 2400, "cap": "Page 3 of 16"}, {"k": "dk6-04", "src": "assets/img/7dd4bda8a9f7327e5cfac45da2203694.jpg", "w": 1553, "h": 2400, "cap": "Page 4 of 16"}, {"k": "dk6-05", "src": "assets/img/51d3d4481a4bdf7f99b1f12ca038aedd.jpg", "w": 1553, "h": 2400, "cap": "Page 5 of 16"}, {"k": "dk6-06", "src": "assets/img/fa8d975317981c274b1fdbc4b7536d1a.jpg", "w": 1553, "h": 2400, "cap": "Page 6 of 16"}, {"k": "dk6-07", "src": "assets/img/c07d9e53b0bb06ba0bedde8213087793.jpg", "w": 1553, "h": 2400, "cap": "Page 7 of 16"}, {"k": "dk6-08", "src": "assets/img/efda22bbc01ddaa36a87ac3457355b0e.jpg", "w": 1553, "h": 2400, "cap": "Page 8 of 16"}, {"k": "dk6-09", "src": "assets/img/0b2a85c5474192eb893f47c9f0c07770.jpg", "w": 1553, "h": 2400, "cap": "Page 9 of 16"}, {"k": "dk6-10", "src": "assets/img/f024329a00f414ba75e3e473a3a55775.jpg", "w": 1553, "h": 2400, "cap": "Page 10 of 16"}, {"k": "dk6-11", "src": "assets/img/1d7abd05f8cfb0383885bf6676f7edfa.jpg", "w": 1553, "h": 2400, "cap": "Page 11 of 16"}, {"k": "dk6-12", "src": "assets/img/a30e896adaaf637016504128d8227956.jpg", "w": 1553, "h": 2400, "cap": "Page 12 of 16"}, {"k": "dk6-13", "src": "assets/img/93806abe1725c3c0293fe5e13daefd4d.jpg", "w": 1553, "h": 2400, "cap": "Page 13 of 16"}, {"k": "dk6-14", "src": "assets/img/fc07c5c88bedd45c97d4206217228bef.jpg", "w": 1553, "h": 2400, "cap": "Page 14 of 16"}, {"k": "dk6-15", "src": "assets/img/b4162cd07c086397924ec44964de87b7.jpg", "w": 1553, "h": 2400, "cap": "Page 15 of 16"}, {"k": "dk6-16", "src": "assets/img/80d4612bf7c2fc0cb9e642788546ade1.jpg", "w": 1553, "h": 2400, "cap": "Page 16 of 16"}]}, {"sp": "sp2", "cat": "menus", "id": "m-dk7", "title": "Dutch Kills", "short": "7th edition, fall 2012 placemat", "desc": "Seventh edition, fall 2012, printed as a two-sided placemat.", "meta": "", "bullets": [], "link": "", "linktext": "", "thumb": "assets/img/793c14cd729634e37169e0a87a18a4ba.jpg", "tw": 2401, "th": 1886, "images": [{"k": "dk7-1", "src": "assets/img/793c14cd729634e37169e0a87a18a4ba.jpg", "w": 2401, "h": 1886, "cap": "Page 1 of 2"}, {"k": "dk7-2", "src": "assets/img/8a70b7e3c69cef5eaf30fe3ce166d229.jpg", "w": 2401, "h": 1886, "cap": "Page 2 of 2"}]}, {"sp": "sp2", "cat": "menus", "id": "m-dk8s", "title": "Dutch Kills", "short": "8th edition, summer 2013 placemat", "desc": "Eighth edition, summer 2013, printed as a two-sided placemat.", "meta": "", "bullets": [], "link": "", "linktext": "", "thumb": "assets/img/19ce43fbd36dcffd844776581637cd3d.jpg", "tw": 1400, "th": 1112, "images": [{"k": "dk8s-1", "src": "assets/img/19ce43fbd36dcffd844776581637cd3d.jpg", "w": 1400, "h": 1112, "cap": "Page 1 of 2"}, {"k": "dk8s-2", "src": "assets/img/9f241be0fe9cc79f4ca30651104bf663.jpg", "w": 1400, "h": 1112, "cap": "Page 2 of 2"}]}, {"sp": "sp2", "cat": "menus", "id": "m-dk8w", "title": "Dutch Kills", "short": "8th edition, winter 2014 booklet", "desc": "Eighth edition, winter 2014, as a booklet with food and hot drinks. Six reader's spreads.", "meta": "", "bullets": [], "link": "", "linktext": "", "thumb": "assets/img/c461f9a5391ce9194a5a9671f8c38de6.jpg", "tw": 1400, "th": 1082, "images": [{"k": "dk8w-1", "src": "assets/img/c461f9a5391ce9194a5a9671f8c38de6.jpg", "w": 1400, "h": 1082, "cap": "Page 1 of 6"}, {"k": "dk8w-2", "src": "assets/img/899d7fe16a1b11581d004897c7148e7d.jpg", "w": 1400, "h": 1082, "cap": "Page 2 of 6"}, {"k": "dk8w-3", "src": "assets/img/dd354f12c0dcb49b16438745d8068b8c.jpg", "w": 1400, "h": 1082, "cap": "Page 3 of 6"}, {"k": "dk8w-4", "src": "assets/img/776538039abdb5499f94804087e85018.jpg", "w": 1400, "h": 1082, "cap": "Page 4 of 6"}, {"k": "dk8w-5", "src": "assets/img/c2f2a97c7aef533a6ac264742b653f92.jpg", "w": 1400, "h": 1082, "cap": "Page 5 of 6"}, {"k": "dk8w-6", "src": "assets/img/e06daea22eb9cc5869ad71612483ba0f.jpg", "w": 1400, "h": 1082, "cap": "Page 6 of 6"}]}, {"sp": "", "cat": "menus", "id": "m-dk13", "title": "Dutch Kills", "short": "Summer 2015 long foldover", "desc": "Menu number 13, summer 2015, a long foldover with the Bartender's Choice happy hour. Four pages.", "meta": "", "bullets": [], "link": "", "linktext": "", "thumb": "assets/img/f1280c60a1c32430205ed95ee80f21cc.jpg", "tw": 1000, "th": 1546, "images": [{"k": "dk13-1", "src": "assets/img/f1280c60a1c32430205ed95ee80f21cc.jpg", "w": 1000, "h": 1546, "cap": "Page 1 of 4"}, {"k": "dk13-2", "src": "assets/img/7b0bf17e4671cd914764568d09a235c9.jpg", "w": 1000, "h": 1546, "cap": "Page 2 of 4"}, {"k": "dk13-3", "src": "assets/img/974af0e76cd7fca2b2e75a693f28e9ac.jpg", "w": 1000, "h": 1546, "cap": "Page 3 of 4"}, {"k": "dk13-4", "src": "assets/img/84a242bc0fc0c23a4320e6e61e80e21b.jpg", "w": 1000, "h": 1546, "cap": "Page 4 of 4"}]}, {"sp": "", "cat": "menus", "id": "m-dkfno", "title": "Dutch Kills", "short": "Fashion's Night Out", "desc": "Cocktail card for Fashion's Night Out, September 8, 2011, presented by Elizabeth Arden at Dutch Kills.", "meta": "", "bullets": [], "link": "", "linktext": "", "thumb": "assets/img/9d5b1ab92e0d19cefb0cfde5ce8c180d.jpg", "tw": 1055, "th": 1400, "images": [{"k": "DK-arden-menu", "src": "assets/img/9d5b1ab92e0d19cefb0cfde5ce8c180d.jpg", "w": 1055, "h": 1400, "cap": ""}]}, {"sp": "", "cat": "menus", "id": "m-dkanniv", "title": "Dutch Kills", "short": "Anniversary menu", "desc": "Placeholder: add a short description here. What the project was, what we made and who it was for.", "meta": "", "bullets": [], "link": "", "linktext": "", "thumb": "assets/img/7da84a488469d3c72e418d77d677c806.jpg", "tw": 1050, "th": 1400, "images": [{"k": "dk-anniversary-menu", "src": "assets/img/7da84a488469d3c72e418d77d677c806.jpg", "w": 1050, "h": 1400, "cap": ""}]}, {"sp": "", "cat": "menus", "id": "m-pkny13", "title": "PKNY", "short": "2013 winter menu", "desc": "Winter 2013 menu for PKNY, the Painkiller Tiki Bar. Nine single pages. The menu was a semi-finalist for Best Menu Design at the Tales of the Cocktail Spirited Awards 2013.", "meta": "", "bullets": [], "link": "", "linktext": "", "thumb": "assets/img/90e19e7f924af7acebd13fd55aaca3a6.jpg", "tw": 928, "th": 2400, "images": [{"k": "pkny13-1", "src": "assets/img/90e19e7f924af7acebd13fd55aaca3a6.jpg", "w": 928, "h": 2400, "cap": "Page 1 of 9"}, {"k": "pkny13-2", "src": "assets/img/b72dc120924cf32db7f04415bbfca24b.jpg", "w": 928, "h": 2400, "cap": "Page 2 of 9"}, {"k": "pkny13-3", "src": "assets/img/16703c18572a36441b288d0045c979ff.jpg", "w": 800, "h": 1036, "cap": "Page 3 of 9"}, {"k": "pkny13-4", "src": "assets/img/17e4a0767a388d2af083a9e57c548c37.jpg", "w": 800, "h": 1036, "cap": "Page 4 of 9"}, {"k": "pkny13-5", "src": "assets/img/fd1df290273525f815f088ee2d0a7861.jpg", "w": 800, "h": 1036, "cap": "Page 5 of 9"}, {"k": "pkny13-6", "src": "assets/img/b4f2a5a7450c28baf18092023f502ef4.jpg", "w": 800, "h": 1036, "cap": "Page 6 of 9"}, {"k": "pkny13-7", "src": "assets/img/062d9f4e29b4d2ff578355d1ae3cd01d.jpg", "w": 800, "h": 1036, "cap": "Page 7 of 9"}, {"k": "pkny13-8", "src": "assets/img/b9a473ba6bb19697c0726220e1995921.jpg", "w": 928, "h": 2400, "cap": "Page 8 of 9"}, {"k": "pkny13-9", "src": "assets/img/542f18e1695932ae9694269150a0f3f1.jpg", "w": 928, "h": 2400, "cap": "Page 9 of 9"}]}, {"sp": "sp2", "cat": "menus", "id": "m-painkiller", "title": "PKNY", "short": "Painkiller New York City", "desc": "Landscape tiki menu with a hand-drawn border of cocktails and vessels over the New York skyline. Printed credit: Illustrations by Kim Sielbeck, Graphic Design by GiantSquidLetterpress.com.", "meta": "", "bullets": [], "link": "", "linktext": "", "thumb": "assets/img/4e02101a6c2da2c9f330d8b49e960bb9.jpg", "tw": 1700, "th": 1336, "images": [{"k": "painkiller-landscape", "src": "assets/img/4e02101a6c2da2c9f330d8b49e960bb9.jpg", "w": 1700, "h": 1336, "cap": ""}]}, {"sp": "sp2", "cat": "menus", "id": "m-pkny-takeout", "title": "PKNY", "short": "Takeout menu, revision 3", "desc": "Takeout menu for PKNY, the Painkiller Tiki Bar, revision 3. Two spreads: the full cocktail list with the coupon, and the Top 10 Classics, Scorpions and the welcome note. The printed credit reads: Illustrations: kimsielbeck.com.", "meta": "", "bullets": [], "link": "", "linktext": "", "thumb": "assets/img/6109703f25450d993f97f597627139b4.jpg", "tw": 1700, "th": 1050, "images": [{"k": "pkny-takeout-1", "src": "assets/img/6109703f25450d993f97f597627139b4.jpg", "w": 1700, "h": 1050, "cap": "Frozens, Daiquiris, Swizzles, Stirred, Creamy, Hot and the Painkiller coupon."}, {"k": "pkny-takeout-2", "src": "assets/img/448bc4a9c111fdaea3c6a182d1498a7a.jpg", "w": 1700, "h": 1050, "cap": "Top 10 Classics, Scorpions and the Welcome everyone note."}]}, {"sp": "", "cat": "menus", "id": "m-pkny-pages", "title": "PKNY", "short": "Menu pages", "desc": "Cover, Stirred and Spirituous, Planter's Punch and Scorpion Bowls pages.", "meta": "", "bullets": [], "link": "", "linktext": "", "thumb": "assets/img/7a55a8e0299a526f875751f941818bdd.jpg", "tw": 928, "th": 2400, "images": [{"k": "menu-pkny-cover", "src": "assets/img/7a55a8e0299a526f875751f941818bdd.jpg", "w": 928, "h": 2400, "cap": "White on black cover with the PKNY tiki mask and hula dancer. Printed credit: Menu design www.GiantSquidLetterpress.com."}, {"k": "menu-pkny-stirred", "src": "assets/img/ff5c6abd4621eff355b54afc7309b30d.jpg", "w": 928, "h": 2400, "cap": "The Stirred and Spirituous page. Printed credit: Ice furnished exclusively for PKNY by Hundred Eight."}, {"k": "menu-pkny-planters", "src": "assets/img/c36a9b011507402454b53ecefabbe655.jpg", "w": 928, "h": 2400, "cap": "The Planter's Punch page with the quote and the four punch recipes."}, {"k": "menu-pkny-scorpion", "src": "assets/img/2fa00fd75b38ef0626c8d62a5d061601.jpg", "w": 504, "h": 1299, "cap": "The Scorpion Bowls page, from the mini scorpions up to the Jolly Stomper."}]}], "social": [{"sp": "sp2", "cat": "social", "id": "s-tac", "title": "Tokyo American Club", "short": "Social media management", "desc": "Social media management for the Tokyo American Club, a private club in Azabujuban, Tokyo.", "meta": "Social Media Manager, Copywriter & Consultant | June 2019 – January 2020", "bullets": ["Developed and implemented a cohesive social media strategy for the 4,000+ member private club in Azabujuban, Tokyo.", "In charge of creation and copywriting of all cross-platform social media posts.", "Increased social media engagement by 150%, focusing on younger, more social-media-savvy members and establishing a new generation of brand advocates for the club.", "Grew Instagram following by 43% (from 1,685 to 2,417) in under 6 months through targeted content strategy and paid social advertising."], "link": "", "linktext": "", "thumb": "assets/img/c98bf89841e30496b695ee860169afa2.jpg", "tw": 2000, "th": 667, "images": [{"k": "tac-panels", "src": "assets/img/c98bf89841e30496b695ee860169afa2.jpg", "w": 2000, "h": 667, "cap": ""}]}, {"sp": "sp2", "cat": "social", "id": "s-jj", "title": "Japan Journeys", "short": "SEO copywriting", "desc": "Writer for Japan Journeys (formerly Trek Japan), an English-language Japan travel site.", "meta": "Writer | April 2019 – March 2020", "bullets": ["Wrote restaurant, bar, and cafe reviews and neighborhood guides for an English-language Japan travel site read by visitors and Tokyo residents. Covered Shibuya, Harajuku, Omotesando, Yoyogi Uehara, and Hiroo.", "Wrote neighborhood eating, drinking, and walking guides to Yoyogi Uehara, Omotesando, and Harajuku.", "Wrote every post for SEO, at 500 to 1,200 words with high-value keywords built in. My Buttermilk Channel review is the first organic Google result for “Beyonce Brunch Tokyo.”"], "link": "https://japanjourneys.jp/tokyo/harajuku/dining/restaurants/buttermilk-channel-tokyo", "linktext": "Read the post on japanjourneys.jp", "thumb": "assets/img/4a3496fc85e296cc589816eaab332321.jpg", "tw": 1270, "th": 714, "images": [{"k": "jj-beyonce-post", "src": "assets/img/4a3496fc85e296cc589816eaab332321.jpg", "w": 1270, "h": 714, "cap": "A Brooklyn Brunch that's Beyonce approved, right in Harajuku. Buttermilk Channel review, January 24, 2020."}]}]};
+const CATS = ["logos", "packaging", "menus", "ui", "social", "posters", "pharma", "other"];
+const LABELS = {"logos": "Logos", "packaging": "Packaging", "menus": "Menu Design", "ui": "UI / UX", "social": "Social", "posters": "Posters", "pharma": "Pharma", "other": "Other"};
+const TYPE = {"logos": "logo", "ui": "proj", "posters": "lb", "packaging": "proj", "menus": "proj", "social": "proj", "pharma": "acc", "other": "acc"};
+const HASH = "f99988355c2567e8c3d4a2a4ea1c48c7ec71995bc954436add48c78d3fc8d6a3";
+class Component extends DCLogic {
+  componentDidMount() {
+    this._kd = (ev) => {
+      const st = this.state || {};
+      if (!st.lb) return;
+      if (ev.key === 'Escape') this.setState({ lb: null });
+      else if (ev.key === 'ArrowRight') this.lbStep(1);
+      else if (ev.key === 'ArrowLeft') this.lbStep(-1);
+    };
+    try { document.addEventListener('keydown', this._kd); } catch (x) {}
+    this._rs = () => this.sched();
+    try { window.addEventListener('resize', this._rs); } catch (x) {}
+    try { if (document.fonts && document.fonts.ready) document.fonts.ready.then(() => this.sched()); } catch (x) {}
+    this.sched();
+  }
+  componentWillUnmount() {
+    try { document.removeEventListener('keydown', this._kd); } catch (x) {}
+    try { window.removeEventListener('resize', this._rs); } catch (x) {}
+  }
+  curCat() { return (this.state && this.state.cat) || 'logos'; }
+  slides(cat) {
+    const out = [];
+    (DATA[cat] || []).forEach((it, i) => it.images.forEach((im, j) => out.push({ it: it, im: im, i: i, j: j })));
+    return out;
+  }
+  lbStep(d) {
+    const st = this.state || {};
+    if (!st.lb) return;
+    const n = this.slides(this.curCat()).length;
+    if (!n) return;
+    this.setState({ lb: { i: (st.lb.i + d + n) % n } });
+  }
+  layout() {
+    try {
+      const g = document.querySelector('.pgrid');
+      if (!g) return;
+      const cards = g.querySelectorAll('button.pcard');
+      g.style.gridAutoRows = '2px';
+      cards.forEach((c) => { c.style.gridRowEnd = 'auto'; });
+      const hs = [];
+      cards.forEach((c) => { hs.push(c.getBoundingClientRect().height); });
+      cards.forEach((c, k) => { c.style.gridRowEnd = 'span ' + Math.ceil((hs[k] + 10) / 2); });
+    } catch (x) {}
+  }
+  sched() {
+    if (this._lt) return;
+    this._lt = setTimeout(() => {
+      this._lt = 0;
+      this.layout();
+      setTimeout(() => this.layout(), 350);
+    }, 40);
+  }
+  tryPw() {
+    const inp = document.getElementById('gatepw');
+    const v = (inp && inp.value) || '';
+    const fail = () => this.setState({ pwErr: true });
+    try {
+      crypto.subtle.digest('SHA-256', new TextEncoder().encode(v)).then((buf) => {
+        const hex = Array.from(new Uint8Array(buf)).map((b) => b.toString(16).padStart(2, '0')).join('');
+        if (hex === HASH) this.setState({ unlocked: true, pwErr: false }); else fail();
+      }, fail);
+    } catch (x) { fail(); }
+  }
+  toTop() {
+    setTimeout(() => {
+      try { const el = document.getElementById('wtop'); if (el) el.scrollIntoView(); } catch (x) {}
+    }, 30);
+  }
+  renderVals() {
+    const st = this.state || {};
+    const cat = st.cat || 'logos';
+    const type = TYPE[cat];
+    const items = DATA[cat] || [];
+    const unlocked = !!st.unlocked;
+    const show = {}, tab = {}, pick = {}, accStyle = {};
+    CATS.forEach((k) => {
+      show[k] = cat === k;
+      tab[k] = cat === k ? 'on' : '';
+      pick[k] = () => { this.setState({ cat: k, open: null, lb: null }); };
+      accStyle[k] = (k === 'pharma' && !unlocked) ? 'filter:blur(18px);pointer-events:none;user-select:none' : '';
+    });
+    const mk = (it, go) => ({ sp: it.sp || '', title: it.title, short: it.short, src: it.thumb, w: it.tw, h: it.th, alt: it.title + ': ' + it.short, go: go });
+    const openItem = (type === 'proj' && st.open) ? items.find((x) => x.id === st.open) : null;
+    const sl = (type === 'logo' || type === 'lb') ? this.slides(cat) : [];
+    const first = (i) => Math.max(0, sl.findIndex((s) => s.i === i && s.j === 0));
+    const logos = type === 'logo' ? items.map((it, i) => ({ src: it.thumb, w: it.tw, h: it.th, alt: it.title, cls: it.hover ? 'hv' : '', hasH: !!it.hover, hsrc: it.hover || '', hw: it.also ? it.also[0].w : 0, hh: it.also ? it.also[0].h : 0, go: () => this.setState({ lb: { i: first(i) } }) })) : [];
+    let cards = [];
+    if (type === 'lb') cards = items.map((it, i) => mk(it, () => this.setState({ lb: { i: first(i) } })));
+    if (type === 'proj') cards = items.map((it) => mk(it, () => { this.setState({ open: it.id }); this.toTop(); }));
+    let det = { back: () => {}, catLabel: '', title: '', short: '', meta: '', hasMeta: false, desc: '', bullets: [], hasBullets: false, link: '', linktext: '', hasLink: false, images: [] };
+    let thumbs = [];
+    if (openItem) {
+      det = {
+        back: () => { this.setState({ open: null }); this.toTop(); },
+        catLabel: LABELS[cat].toLowerCase(),
+        title: openItem.title, short: openItem.short,
+        meta: openItem.meta, hasMeta: !!openItem.meta,
+        desc: openItem.desc,
+        bullets: openItem.bullets.map((t) => ({ t: t })), hasBullets: openItem.bullets.length > 0,
+        link: openItem.link, linktext: openItem.linktext, hasLink: !!openItem.link,
+        images: openItem.images.map((m) => ({ src: m.src, w: m.w, h: m.h, cap: m.cap, hasCap: !!m.cap, alt: openItem.title + ': ' + openItem.short }))
+      };
+      thumbs = items.filter((x) => x.id !== openItem.id).map((it) => mk(it, () => { this.setState({ open: it.id }); this.toTop(); }));
+    }
+    let lbv = { open: false, close: () => {}, prev: () => {}, next: () => {}, bg: '#ffffff', blend: 'normal', src: '', src2: '', has2: false, cls: '', alt: '', title: '', short: '', desc: '', cap: '', hasCap: false, count: '' };
+    if (st.lb && (type === 'logo' || type === 'lb') && sl[st.lb.i]) {
+      const it = sl[st.lb.i].it;
+      const im = sl[st.lb.i].im;
+      lbv = {
+        open: true,
+        close: () => this.setState({ lb: null }),
+        prev: () => this.lbStep(-1),
+        next: () => this.lbStep(1),
+        bg: '#ffffff',
+        blend: type === 'logo' ? 'multiply' : 'normal',
+        src: im.src, alt: it.title + ': ' + it.short,
+        src2: it.also ? it.also[0].src : '', has2: !!it.also, cls: it.also ? 'half' : '',
+        title: it.title, short: it.short, desc: it.desc, cap: im.cap || '', hasCap: !!im.cap,
+        count: (st.lb.i + 1) + ' / ' + sl.length
+      };
+    }
+    const gate = {
+      show: cat === 'pharma' && !unlocked,
+      err: !!st.pwErr,
+      key: (ev) => { if (ev && ev.key === 'Enter') { if (ev.preventDefault) ev.preventDefault(); this.tryPw(); } },
+      submit: (ev) => { if (ev && ev.preventDefault) ev.preventDefault(); this.tryPw(); }
+    };
+    this.sched();
+    return {
+      show: show, tab: tab, pick: pick, accStyle: accStyle,
+      view: { logos: type === 'logo', cards: (type === 'lb') || (type === 'proj' && !openItem), detail: !!openItem },
+      logos: logos, cards: cards, det: det, thumbs: thumbs, lbv: lbv, gate: gate
+    };
+  }
+}
+</script>
+</body>
+</html>
