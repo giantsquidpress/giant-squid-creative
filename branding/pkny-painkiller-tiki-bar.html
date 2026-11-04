@@ -89,15 +89,20 @@ input.field::placeholder,textarea.field::placeholder{color:rgba(0,0,0,0.5);opaci
 .chero.cover{background-size:cover}
 .chero.contain{background-size:contain}
 .chero.wfit{background-size:100% auto}
+.chero.blur{background-color:#2b1d17;overflow:hidden}
+.chero.blur .hb,.chero.blur .hf{position:absolute;top:0;left:0;width:100%;height:100%;background-position:center;background-repeat:no-repeat}
+.chero.blur .hb{background-size:cover;filter:blur(24px);transform:scale(1.15)}
+.chero.blur .hf{background-size:contain}
+@media (min-aspect-ratio:3/2){.chero.blur .hf{background-size:cover}.chero.blur .hb{display:none}}
 .chero ~ *{position:relative;z-index:2;background-color:#b9e5fb}
 .cmain{max-width:1440px;margin:0 auto;padding:0 40px 96px;box-sizing:border-box;display:flex;flex-direction:column;align-items:center}
 .cban{display:block;width:100%;height:auto;margin-top:56px}
 .ctitle{display:flex;flex-direction:column;align-items:center;text-align:center;width:100%;padding-top:72px}
-.ctitle .svc{margin:0 0 14px;font-family:var(--font-cond);font-weight:600;font-size:clamp(15px,1.6vw,22px);line-height:1.2;letter-spacing:0.06em;text-transform:uppercase;color:#d32827}
+.ctitle .svc{margin:12px 0 0;max-width:773px;font-family:var(--font-cond);font-weight:600;font-size:clamp(15px,1.6vw,22px);line-height:1.3;letter-spacing:0.06em;text-transform:uppercase;color:#182857}
 .ctitle h1{margin:0;font-family:var(--font-xcomp);font-weight:600;line-height:1;letter-spacing:0;text-transform:uppercase;color:#182857;text-align:center}
-.ctitle .sub{margin:22px 0 0;max-width:1200px;font-family:'Playfair Display',Georgia,serif;font-style:italic;font-size:30px;line-height:1.3;font-weight:400;color:#d32827}
-.clogo{display:block;width:min(600px,100%);height:auto;margin:72px 0 0}
-.ctext{width:66.66%;margin-top:56px;display:flex;flex-direction:column;gap:26px}
+.ctitle .sub{margin:0 0 22px;max-width:1200px;font-family:'Playfair Display',Georgia,serif;font-style:italic;font-size:30px;line-height:1.3;font-weight:400;color:#d32827}
+.clogo{display:block;max-width:100%;height:auto;margin:72px 0 0}
+.ctext{width:66.66%;margin-top:50px;display:flex;flex-direction:column;gap:26px}
 .ctext p{margin:0;font-size:30px;line-height:1.35;font-weight:400}
 .ctext p.cstat{font-weight:600}
 .cfig{margin:48px auto 0;width:100%;text-align:center}
@@ -105,15 +110,17 @@ input.field::placeholder,textarea.field::placeholder{color:rgba(0,0,0,0.5);opaci
 .ccap{font-family:var(--font-cond);font-size:22px;line-height:1.25;font-weight:400;color:#182857;text-align:center;margin-top:12px}
 .ccap .ct{font-weight:600;text-transform:uppercase;letter-spacing:0.02em;margin-right:0.3em}
 .cmwh{margin:104px 0 28px;text-align:center;font-family:'Bebas Neue','Franklin Gothic Condensed',sans-serif;font-weight:400;font-size:clamp(40px,5.3vw,76px);line-height:1;letter-spacing:0.02em;text-transform:uppercase;color:#182857}
-.cmore{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:30px;width:100%;max-width:1100px}
+.cmore{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;width:100%;max-width:1100px}
 .cmore a{display:block;text-align:center;text-decoration:none;color:inherit}
 .cmore .mwi{overflow:hidden;position:relative;aspect-ratio:1.5}
 .cmore .mwi img{position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;display:block;transition:transform 300ms ease-out}
 .cmore a:hover .mwi img{transform:scale(1.06)}
 .cmore .ccap{font-size:20px}
-a.cback{display:inline-flex;align-items:center;justify-content:center;margin-top:72px;height:44px;padding:4px 30px 0;box-sizing:border-box;border-radius:999px;color:#ffffff;font-family:var(--font-cond);font-weight:600;font-size:17px;line-height:1;letter-spacing:0.06em;text-transform:uppercase}
+.cbtns{display:flex;flex-wrap:wrap;justify-content:center;gap:14px;margin-top:72px}
+a.cback{display:inline-flex;align-items:center;justify-content:center;height:44px;padding:4px 30px 0;box-sizing:border-box;border-radius:999px;color:#ffffff;font-family:var(--font-cond);font-weight:600;font-size:17px;line-height:1;letter-spacing:0.06em;text-transform:uppercase}
 @media (max-width:991px){.ctext{width:83.33%}}
-@media (max-width:767px){.chero{height:min(calc(100vh - 91px),1100px)}.cmain{padding:0 16px 64px}.ctext{width:100%}.ctext p{font-size:22px}.ctitle .sub{font-size:24px}.ctitle{padding-top:48px}.cmore{grid-template-columns:minmax(0,1fr)}.ccap{font-size:18px}.cmore .ccap{font-size:18px}.cmwh{margin-top:72px}}
+@media (max-width:900px){.cmore{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:767px){.chero{height:min(calc(100vh - 91px),1100px)}.cmain{padding:0 16px 64px}.ctext{width:100%}.ctext p{font-size:22px}.ctitle .sub{font-size:24px}.ctitle{padding-top:48px}.cmore{grid-template-columns:minmax(0,1fr)}.ccap{font-size:18px}.cmwh{margin-top:72px}}
 
 a.card:focus-visible{outline:3px solid #d32827;outline-offset:2px}
 input.field,textarea.field{font-family:var(--font-cond);font-size:20px;font-weight:500;color:#182857;background:#ffffff;border:2px solid #ffffff;border-radius:10px;padding:0 16px;box-sizing:border-box;width:100%}
@@ -144,10 +151,11 @@ input.field:focus,textarea.field:focus{outline:3px solid #d32827;outline-offset:
 
   <div class="chero cover" role="img" aria-label="PKNY Painkiller tiki bar" style="background-image:url(../assets/img/b90246b11e21e440f0d9178639e1e81e.jpg);background-color:#e8e6cf"></div>
 <main class="cmain">
-<div class="ctitle" style="padding-top:72px"><p class="svc">Branding, Illustration, Menu Design, Website Design</p><h1 style="font-size:min(127.5px, calc((100vw - 80px) / 13.00))">PKNY (Painkiller) Tiki Bar</h1><p class="sub">The NYC tiki bar that started a worldwide trend.</p></div>
+<img class="clogo" src="../assets/img/015e117a279d6ef3adc19f431a1bd3f2.png" alt="PKNY (Painkiller) Tiki Bar logo" width="225" height="190" style="width:min(225px,100%)">
+<div class="ctitle"><h1 style="font-size:min(127.5px, calc((100vw - 80px) / 13.00))">PKNY (Painkiller) Tiki Bar</h1><p class="sub">The NYC tiki bar that started a worldwide trend.</p><p class="svc">Branding, Illustration, Menu Design, Website Design</p></div>
 <div class="ctext"><p>It was 2009 and Dutch Kills had just opened in Long Island City. I was working in advertising on 42nd street and living in Astoria. Dutch Kills was the perfect stopover on my way home and I'd pop in a couple times a week. One day, one of the bartenders mentioned they were opening a tiki bar in the city and I said "If you need some design work I know a guy that does great vintage styled design"</p><p>Painkiller, later renamed PKNY became a much beloved drinking den by people near and far. They are credited with being at the forefront of the worldwide tiki resurgence, inspiring bars and new cocktails the world over.</p><p>Branding, collateral and menu design for Richard Boccato’s pioneering NYC Tiki bar. The menu design for PKNY was a semi-finalist for “Best Menu Design” at Tales of the Cocktail Spirited Awards 2013.</p></div>
 <figure class="cfig" style="max-width:1008px"><img src="../assets/img/80a849cb9b3a2a806b9b992915fcdac9.png" alt="Painkiller (PKNY): Iconic original placemat menu by Giant Squid Creative" width="1700" height="1336"><figcaption class="ccap"><span class="ct">Painkiller (PKNY):</span>Iconic original placemat menu by Giant Squid Creative</figcaption></figure><figure class="cfig" style="max-width:1008px"><img src="../assets/img/0d3f880ff79543fd0396b7da0822f281.jpg" alt="Chinatown menu: Inspired by their Chinatown location, a new menu was modeled after classic Chinese food menus (Design: Giant Squid Creative) (It&#x27;s not backwards... it&#x27;s a z-fold. ::eyeroll::)" width="1400" height="865"><figcaption class="ccap"><span class="ct">Chinatown menu:</span>Inspired by their Chinatown location, a new menu was modeled after classic Chinese food menus (Design: Giant Squid Creative) (It's not backwards... it's a z-fold. ::eyeroll::)</figcaption></figure>
-<h2 class="cmwh">More Branding Work</h2><div class="cmore"><a href="../branding/sanita-tokyo.html"><div class="mwi"><img src="../assets/img/57f07ff9de45aa30e80362fb99751954.jpg" alt="Sanita Tokyo menu"></div><div class="ccap"><span class="ct">Sanita Tokyo:</span>Branding, menu design, social</div></a><a href="../branding/tokyo-american-club.html"><div class="mwi"><img src="../assets/img/f2848728653f3e57784b71dfe6318121.jpg" alt="Tokyo American Club entrance at evening"></div><div class="ccap"><span class="ct">Tokyo American Club:</span>Social media management</div></a><a href="../branding/doughnut-time-its-always-a-good-time.html"><div class="mwi"><img src="../assets/img/3b6ac65ff6a55c37a5ce266181eba0c4.jpg" alt="Doughnut Time website, desktop and mobile"></div><div class="ccap"><span class="ct">Doughnut Time:</span>Branding, packaging, social</div></a></div><a class="pill cback" href="../work.html">Back to Work page</a>
+<h2 class="cmwh">More Case Studies</h2><div class="cmore"><a class="card" href="../branding/sanita-tokyo.html" style="display:flex;flex-direction:column;padding:10px 10px 0;box-sizing:border-box;border-radius:10px;color:#182857"><div style="position:relative;aspect-ratio:1.5;border-radius:10px;overflow:hidden"><img src="../assets/img/57f07ff9de45aa30e80362fb99751954.jpg" alt="Sanita Tokyo menu" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;display:block"></div><div class="cap" style="min-height:50px;padding-top:6px;box-sizing:border-box;display:flex;flex-wrap:wrap;align-content:center;align-items:baseline;column-gap:0.3em;text-align:left;font-size:19px;line-height:1.25;font-weight:400"><span style="font-weight:600;text-transform:uppercase;letter-spacing:0.02em">Sanita Tokyo:</span><span>Branding, menu design, social</span></div></a><a class="card" href="../branding/tokyo-american-club.html" style="display:flex;flex-direction:column;padding:10px 10px 0;box-sizing:border-box;border-radius:10px;color:#182857"><div style="position:relative;aspect-ratio:1.5;border-radius:10px;overflow:hidden"><img src="../assets/img/f2848728653f3e57784b71dfe6318121.jpg" alt="Tokyo American Club entrance at evening" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;display:block"></div><div class="cap" style="min-height:50px;padding-top:6px;box-sizing:border-box;display:flex;flex-wrap:wrap;align-content:center;align-items:baseline;column-gap:0.3em;text-align:left;font-size:19px;line-height:1.25;font-weight:400"><span style="font-weight:600;text-transform:uppercase;letter-spacing:0.02em">Tokyo American Club:</span><span>Social media management</span></div></a><a class="card" href="../branding/doughnut-time-its-always-a-good-time.html" style="display:flex;flex-direction:column;padding:10px 10px 0;box-sizing:border-box;border-radius:10px;color:#182857"><div style="position:relative;aspect-ratio:1.5;border-radius:10px;overflow:hidden"><img src="../assets/img/3b6ac65ff6a55c37a5ce266181eba0c4.jpg" alt="Doughnut Time website, desktop and mobile" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;display:block"></div><div class="cap" style="min-height:50px;padding-top:6px;box-sizing:border-box;display:flex;flex-wrap:wrap;align-content:center;align-items:baseline;column-gap:0.3em;text-align:left;font-size:19px;line-height:1.25;font-weight:400"><span style="font-weight:600;text-transform:uppercase;letter-spacing:0.02em">Doughnut Time:</span><span>Branding, packaging, social</span></div></a></div><div class="cbtns"><a class="pill cback" href="../index.html">Back to home</a><a class="pill cback" href="../work.html">View our portfolio</a></div>
 </main>
 
   <!-- Footer -->
@@ -177,7 +185,7 @@ input.field:focus,textarea.field:focus{outline:3px solid #d32827;outline-offset:
   </footer>
 </div>
 </x-dc>
-<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":4476}}'>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":5045}}'>
 class Component extends DCLogic {
   renderVals() {
     return { noop: (e) => { if (e && e.preventDefault) e.preventDefault(); } };

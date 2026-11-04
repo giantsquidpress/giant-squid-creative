@@ -89,15 +89,20 @@ input.field::placeholder,textarea.field::placeholder{color:rgba(0,0,0,0.5);opaci
 .chero.cover{background-size:cover}
 .chero.contain{background-size:contain}
 .chero.wfit{background-size:100% auto}
+.chero.blur{background-color:#2b1d17;overflow:hidden}
+.chero.blur .hb,.chero.blur .hf{position:absolute;top:0;left:0;width:100%;height:100%;background-position:center;background-repeat:no-repeat}
+.chero.blur .hb{background-size:cover;filter:blur(24px);transform:scale(1.15)}
+.chero.blur .hf{background-size:contain}
+@media (min-aspect-ratio:3/2){.chero.blur .hf{background-size:cover}.chero.blur .hb{display:none}}
 .chero ~ *{position:relative;z-index:2;background-color:#b9e5fb}
 .cmain{max-width:1440px;margin:0 auto;padding:0 40px 96px;box-sizing:border-box;display:flex;flex-direction:column;align-items:center}
 .cban{display:block;width:100%;height:auto;margin-top:56px}
 .ctitle{display:flex;flex-direction:column;align-items:center;text-align:center;width:100%;padding-top:72px}
-.ctitle .svc{margin:0 0 14px;font-family:var(--font-cond);font-weight:600;font-size:clamp(15px,1.6vw,22px);line-height:1.2;letter-spacing:0.06em;text-transform:uppercase;color:#d32827}
+.ctitle .svc{margin:12px 0 0;max-width:773px;font-family:var(--font-cond);font-weight:600;font-size:clamp(15px,1.6vw,22px);line-height:1.3;letter-spacing:0.06em;text-transform:uppercase;color:#182857}
 .ctitle h1{margin:0;font-family:var(--font-xcomp);font-weight:600;line-height:1;letter-spacing:0;text-transform:uppercase;color:#182857;text-align:center}
-.ctitle .sub{margin:22px 0 0;max-width:1200px;font-family:'Playfair Display',Georgia,serif;font-style:italic;font-size:30px;line-height:1.3;font-weight:400;color:#d32827}
-.clogo{display:block;width:min(600px,100%);height:auto;margin:72px 0 0}
-.ctext{width:66.66%;margin-top:56px;display:flex;flex-direction:column;gap:26px}
+.ctitle .sub{margin:0 0 22px;max-width:1200px;font-family:'Playfair Display',Georgia,serif;font-style:italic;font-size:30px;line-height:1.3;font-weight:400;color:#d32827}
+.clogo{display:block;max-width:100%;height:auto;margin:72px 0 0}
+.ctext{width:66.66%;margin-top:50px;display:flex;flex-direction:column;gap:26px}
 .ctext p{margin:0;font-size:30px;line-height:1.35;font-weight:400}
 .ctext p.cstat{font-weight:600}
 .cfig{margin:48px auto 0;width:100%;text-align:center}
@@ -105,15 +110,17 @@ input.field::placeholder,textarea.field::placeholder{color:rgba(0,0,0,0.5);opaci
 .ccap{font-family:var(--font-cond);font-size:22px;line-height:1.25;font-weight:400;color:#182857;text-align:center;margin-top:12px}
 .ccap .ct{font-weight:600;text-transform:uppercase;letter-spacing:0.02em;margin-right:0.3em}
 .cmwh{margin:104px 0 28px;text-align:center;font-family:'Bebas Neue','Franklin Gothic Condensed',sans-serif;font-weight:400;font-size:clamp(40px,5.3vw,76px);line-height:1;letter-spacing:0.02em;text-transform:uppercase;color:#182857}
-.cmore{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:30px;width:100%;max-width:1100px}
+.cmore{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;width:100%;max-width:1100px}
 .cmore a{display:block;text-align:center;text-decoration:none;color:inherit}
 .cmore .mwi{overflow:hidden;position:relative;aspect-ratio:1.5}
 .cmore .mwi img{position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;display:block;transition:transform 300ms ease-out}
 .cmore a:hover .mwi img{transform:scale(1.06)}
 .cmore .ccap{font-size:20px}
-a.cback{display:inline-flex;align-items:center;justify-content:center;margin-top:72px;height:44px;padding:4px 30px 0;box-sizing:border-box;border-radius:999px;color:#ffffff;font-family:var(--font-cond);font-weight:600;font-size:17px;line-height:1;letter-spacing:0.06em;text-transform:uppercase}
+.cbtns{display:flex;flex-wrap:wrap;justify-content:center;gap:14px;margin-top:72px}
+a.cback{display:inline-flex;align-items:center;justify-content:center;height:44px;padding:4px 30px 0;box-sizing:border-box;border-radius:999px;color:#ffffff;font-family:var(--font-cond);font-weight:600;font-size:17px;line-height:1;letter-spacing:0.06em;text-transform:uppercase}
 @media (max-width:991px){.ctext{width:83.33%}}
-@media (max-width:767px){.chero{height:min(calc(100vh - 91px),1100px)}.cmain{padding:0 16px 64px}.ctext{width:100%}.ctext p{font-size:22px}.ctitle .sub{font-size:24px}.ctitle{padding-top:48px}.cmore{grid-template-columns:minmax(0,1fr)}.ccap{font-size:18px}.cmore .ccap{font-size:18px}.cmwh{margin-top:72px}}
+@media (max-width:900px){.cmore{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:767px){.chero{height:min(calc(100vh - 91px),1100px)}.cmain{padding:0 16px 64px}.ctext{width:100%}.ctext p{font-size:22px}.ctitle .sub{font-size:24px}.ctitle{padding-top:48px}.cmore{grid-template-columns:minmax(0,1fr)}.ccap{font-size:18px}.cmwh{margin-top:72px}}
 
 a.card:focus-visible{outline:3px solid #d32827;outline-offset:2px}
 input.field,textarea.field{font-family:var(--font-cond);font-size:20px;font-weight:500;color:#182857;background:#ffffff;border:2px solid #ffffff;border-radius:10px;padding:0 16px;box-sizing:border-box;width:100%}
@@ -144,10 +151,10 @@ input.field:focus,textarea.field:focus{outline:3px solid #d32827;outline-offset:
 
   <div class="chero2" role="img" aria-label="Tokyo American Club entrance at evening" style="background-image:url(../assets/img/296394c161d548ea6bd2179d200d20d2.jpg)"></div>
 <main class="cmain">
-<div class="ctitle" style="padding-top:72px"><p class="svc">Social Media Management, Copywriting &amp; Consulting</p><h1 style="font-size:min(127.5px, calc((100vw - 80px) / 10.27))">Tokyo American Club</h1><p class="sub">Social media manager, copywriter and consultant, June 2019 to January 2020</p></div>
+<div class="ctitle" style="padding-top:72px"><h1 style="font-size:min(127.5px, calc((100vw - 80px) / 10.27))">Tokyo American Club</h1><p class="sub">During our management social engagement increased 150%</p><p class="svc">Social Media Management, Copywriting &amp; Consulting</p></div>
 <div class="ctext"><p>We developed and implemented a cohesive social media strategy for the Tokyo American Club, a private club with 4,000+ members in Azabujuban, Tokyo.</p><p>We created and wrote every cross-platform social media post.</p><p>We increased social media engagement by 150%, focusing on younger, more social-media-savvy members and establishing a new generation of brand advocates for the club.</p><p>We grew the club’s Instagram following by 43%, from 1,685 to 2,417, in under 6 months through targeted content strategy and paid social advertising.</p></div>
 <figure class="cfig" style="max-width:1008px"><img src="../assets/img/4ce0a989df25d217625b99be831d177f.png" alt="Instagram impressions: 19,784 in August to 46,167 in October 2019" width="1814" height="1166"><figcaption class="ccap"><span class="ct">Instagram impressions:</span>19,784 in August to 46,167 in October 2019</figcaption></figure><figure class="cfig" style="max-width:1200px"><img src="../assets/img/b2a1c0b313e1467d3398e4686adf3299.png" alt="Instagram engagements: 6.1K, up from 2.5K, August 15 to December 31, 2019" width="2160" height="633"><figcaption class="ccap"><span class="ct">Instagram engagements:</span>6.1K, up from 2.5K, August 15 to December 31, 2019</figcaption></figure>
-<h2 class="cmwh">More Branding Work</h2><div class="cmore"><a href="../branding/doughnut-time-its-always-a-good-time.html"><div class="mwi"><img src="../assets/img/3b6ac65ff6a55c37a5ce266181eba0c4.jpg" alt="Doughnut Time website, desktop and mobile"></div><div class="ccap"><span class="ct">Doughnut Time:</span>Branding, packaging, social</div></a><a href="../branding/dutch-kills-bar-long-island-city.html"><div class="mwi"><img src="../assets/img/74999661a4eedafaee0d31115ee368a0.jpg" alt="Dutch Kills Bar rebrand"></div><div class="ccap"><span class="ct">Dutch Kills:</span>Rebrand, menu, collateral</div></a><a href="../branding/pkny-painkiller-tiki-bar.html"><div class="mwi"><img src="../assets/img/f568cf3ee5dd5257e99c7fb186a3f0b5.jpg" alt="PKNY logo"></div><div class="ccap"><span class="ct">PKNY:</span>Branding, menu, website</div></a></div><a class="pill cback" href="../work.html">Back to Work page</a>
+<h2 class="cmwh">More Case Studies</h2><div class="cmore"><a class="card" href="../branding/doughnut-time-its-always-a-good-time.html" style="display:flex;flex-direction:column;padding:10px 10px 0;box-sizing:border-box;border-radius:10px;color:#182857"><div style="position:relative;aspect-ratio:1.5;border-radius:10px;overflow:hidden"><img src="../assets/img/3b6ac65ff6a55c37a5ce266181eba0c4.jpg" alt="Doughnut Time website, desktop and mobile" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;display:block"></div><div class="cap" style="min-height:50px;padding-top:6px;box-sizing:border-box;display:flex;flex-wrap:wrap;align-content:center;align-items:baseline;column-gap:0.3em;text-align:left;font-size:19px;line-height:1.25;font-weight:400"><span style="font-weight:600;text-transform:uppercase;letter-spacing:0.02em">Doughnut Time:</span><span>Branding, packaging, social</span></div></a><a class="card" href="../branding/dutch-kills-bar-long-island-city.html" style="display:flex;flex-direction:column;padding:10px 10px 0;box-sizing:border-box;border-radius:10px;color:#182857"><div style="position:relative;aspect-ratio:1.5;border-radius:10px;overflow:hidden"><img src="../assets/img/74999661a4eedafaee0d31115ee368a0.jpg" alt="Dutch Kills Bar rebrand" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;display:block"></div><div class="cap" style="min-height:50px;padding-top:6px;box-sizing:border-box;display:flex;flex-wrap:wrap;align-content:center;align-items:baseline;column-gap:0.3em;text-align:left;font-size:19px;line-height:1.25;font-weight:400"><span style="font-weight:600;text-transform:uppercase;letter-spacing:0.02em">Dutch Kills:</span><span>Rebrand, menu, collateral</span></div></a><a class="card" href="../branding/pkny-painkiller-tiki-bar.html" style="display:flex;flex-direction:column;padding:10px 10px 0;box-sizing:border-box;border-radius:10px;color:#182857"><div style="position:relative;aspect-ratio:1.5;border-radius:10px;overflow:hidden"><img src="../assets/img/f568cf3ee5dd5257e99c7fb186a3f0b5.jpg" alt="PKNY logo" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;display:block"></div><div class="cap" style="min-height:50px;padding-top:6px;box-sizing:border-box;display:flex;flex-wrap:wrap;align-content:center;align-items:baseline;column-gap:0.3em;text-align:left;font-size:19px;line-height:1.25;font-weight:400"><span style="font-weight:600;text-transform:uppercase;letter-spacing:0.02em">PKNY:</span><span>Branding, menu, website</span></div></a></div><div class="cbtns"><a class="pill cback" href="../index.html">Back to home</a><a class="pill cback" href="../work.html">View our portfolio</a></div>
 </main>
 
   <!-- Footer -->
@@ -177,7 +184,7 @@ input.field:focus,textarea.field:focus{outline:3px solid #d32827;outline-offset:
   </footer>
 </div>
 </x-dc>
-<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":3901}}'>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":3925}}'>
 class Component extends DCLogic {
   renderVals() {
     return { noop: (e) => { if (e && e.preventDefault) e.preventDefault(); } };
